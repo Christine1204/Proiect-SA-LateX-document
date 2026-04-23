@@ -1,0 +1,36 @@
+\babel@toc {english}{}\relax 
+\contentsline {section}{\numberline {1}Introducere}{2}{section.1}%
+\contentsline {subsection}{\numberline {1.1}License}{2}{subsection.1.1}%
+\contentsline {section}{\numberline {2}Document Styling}{2}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Document Type}{2}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Abstract and Keywords}{2}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Lettrine}{2}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Table of Contents}{2}{subsection.2.4}%
+\contentsline {section}{\numberline {3}Cross-Reference Commands*}{2}{section.3}%
+\contentsline {section}{\numberline {4}Figures}{2}{section.4}%
+\contentsline {section}{\numberline {5}Tables}{2}{section.5}%
+\contentsline {section}{\numberline {6}Document Data}{2}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Front-Matter Footer Block*}{2}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Headers and Footers*}{3}{subsection.6.2}%
+\contentsline {subsubsection}{\numberline {6.2.1}Headers}{3}{subsubsection.6.2.1}%
+\contentsline {subsubsection}{\numberline {6.2.2}Footers}{3}{subsubsection.6.2.2}%
+\contentsline {section}{\numberline {7}Rho Custom Packages}{3}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Rhobabel.sty}{3}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Rhoenvs.sty}{3}{subsection.7.2}%
+\contentsline {section}{\numberline {8}Equations}{3}{section.8}%
+\contentsline {section}{\numberline {9}Codes}{3}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Coding with Minted*}{3}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Coding with Listings}{3}{subsection.9.2}%
+\contentsline {subsection}{\numberline {9.3}Inline Code*}{4}{subsection.9.3}%
+\contentsline {section}{Numberless section}{4}{subsection.9.3}%
+\contentsline {section}{\numberline {10}Bibliography}{4}{section.10}%
+\contentsline {section}{FAQ}{4}{section.10}%
+\contentsline {subsection}{How do I manage my references?}{4}{section.10}%
+\contentsline {subsection}{What should I do with the example files?}{4}{section.10}%
+\contentsline {subsection}{How do I place equations easily?}{4}{section.10}%
+\contentsline {subsection}{How do I change the paper size?}{4}{section.10}%
+\contentsline {section}{Contact me}{4}{section.10}%
+\contentsline {section}{Github Repository}{4}{section.10}%
+\contentsline {section}{Supporting}{4}{section.10}%
+\contentsfinish 
+\contentsline {subsection}{Any contributions are welcome!}{5}{section.10}%
