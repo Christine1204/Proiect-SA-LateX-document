@@ -1,0 +1,15 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{+w}{  }\PYG{k}{template}\PYG{o}{\PYGZlt{}}\PYG{k}{typename}\PYG{+w}{ }\PYG{n+nc}{\PYGZus{}RandomAccessIterator}\PYG{p}{,}\PYG{+w}{ }\PYG{k}{typename}\PYG{+w}{ }\PYG{n+nc}{\PYGZus{}Compare}\PYG{o}{\PYGZgt{}}
+\PYG{+w}{    }\PYG{k+kr}{inline}\PYG{+w}{ }\PYG{k+kt}{void}
+\PYG{+w}{    }\PYG{n}{\PYGZus{}\PYGZus{}sort}\PYG{p}{(}\PYG{n}{\PYGZus{}RandomAccessIterator}\PYG{+w}{ }\PYG{n}{\PYGZus{}\PYGZus{}first}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{\PYGZus{}RandomAccessIterator}\PYG{+w}{ }\PYG{n}{\PYGZus{}\PYGZus{}last}\PYG{p}{,}
+\PYG{+w}{	   }\PYG{n}{\PYGZus{}Compare}\PYG{+w}{ }\PYG{n}{\PYGZus{}\PYGZus{}comp}\PYG{p}{)}
+\PYG{+w}{    }\PYG{p}{\PYGZob{}}
+\PYG{+w}{      }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{\PYGZus{}\PYGZus{}first}\PYG{+w}{ }\PYG{o}{!=}\PYG{+w}{ }\PYG{n}{\PYGZus{}\PYGZus{}last}\PYG{p}{)}
+\PYG{+w}{	}\PYG{p}{\PYGZob{}}
+\PYG{+w}{	  }\PYG{n}{std}\PYG{o}{::}\PYG{n}{\PYGZus{}\PYGZus{}introsort\PYGZus{}loop}\PYG{p}{(}\PYG{n}{\PYGZus{}\PYGZus{}first}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{\PYGZus{}\PYGZus{}last}\PYG{p}{,}
+\PYG{+w}{				}\PYG{n}{std}\PYG{o}{::}\PYG{n}{\PYGZus{}\PYGZus{}lg}\PYG{p}{(}\PYG{n}{\PYGZus{}\PYGZus{}last}\PYG{+w}{ }\PYG{o}{\PYGZhy{}}\PYG{+w}{ }\PYG{n}{\PYGZus{}\PYGZus{}first}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{l+m+mi}{2}\PYG{p}{,}
+\PYG{+w}{				}\PYG{n}{\PYGZus{}\PYGZus{}comp}\PYG{p}{);}
+\PYG{+w}{	  }\PYG{n}{std}\PYG{o}{::}\PYG{n}{\PYGZus{}\PYGZus{}final\PYGZus{}insertion\PYGZus{}sort}\PYG{p}{(}\PYG{n}{\PYGZus{}\PYGZus{}first}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{\PYGZus{}\PYGZus{}last}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{\PYGZus{}\PYGZus{}comp}\PYG{p}{);}
+\PYG{+w}{	}\PYG{p}{\PYGZcb{}}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+\end{MintedVerbatim}

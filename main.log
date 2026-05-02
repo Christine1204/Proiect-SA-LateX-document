@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.26)  23 APR 2026 14:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.26)  2 MAY 2026 17:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1575,7 +1575,29 @@ Package biblatex Info: Automatic encoding selection.
 
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
- (./main.bbl)
+ (./main.bbl
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                PFGPlots
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                bell2022codefont
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+
+Package biblatex Warning: The following entry could not be found
+(biblatex)                in the database:
+(biblatex)                davis2023signalflow
+(biblatex)                Please verify the spelling and rerun
+(biblatex)                LaTeX afterwards.
+
+)
 Package biblatex Info: Reference section=0 on input line 95.
 Package biblatex Info: Reference segment=0 on input line 95.
 Package microtype Info: Patching varwidth to enable character protrusion.
@@ -1745,10 +1767,18 @@ LaTeX Font Info:    Font shape `T1/FiraSans-OsF/m/n' in size <8> not available
 (Font)              Font shape `T1/FiraSans-OsF/regular/n' tried instead on input line 3.
 LaTeX Font Info:    Font shape `T1/FiraSans-OsF/regular/n' will be
 (Font)              scaled to size 8.0pt on input line 3.
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/m/n' in size <5> not available
+(Font)              Font shape `T1/FiraSans-OsF/regular/n' tried instead on input line 3.
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/regular/n' will be
+(Font)              scaled to size 5.0pt on input line 3.
 LaTeX Font Info:    Font shape `TS1/FiraSans-OsF/m/n' in size <7> not available
-(Font)              Font shape `TS1/FiraSans-OsF/regular/n' tried instead on input line 16.
+(Font)              Font shape `TS1/FiraSans-OsF/regular/n' tried instead on input line 8.
 LaTeX Font Info:    Font shape `TS1/FiraSans-OsF/regular/n' will be
-(Font)              scaled to size 7.0pt on input line 16.
+(Font)              scaled to size 7.0pt on input line 8.
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/m/it' in size <7> not available
+(Font)              Font shape `T1/FiraSans-OsF/regular/it' tried instead on input line 19.
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/regular/it' will be
+(Font)              scaled to size 7.0pt on input line 19.
 )
 \tf@toc=\write6
 \openout6 = `main.toc'.
@@ -1763,61 +1793,129 @@ LaTeX Font Info:    Font shape `T1/FiraSans-OsF/bold/n' will be
 ]
 Package lettrine.sty Info: Targeted height = 15.846pt
 (lettrine.sty)             (for loversize=0, accent excluded),
-(lettrine.sty)             Lettrine height = 17.68498pt ({\fontsize {27}{24}\color {rhocolor}\bfseries {R}});
+(lettrine.sty)             Lettrine height = 17.68498pt ({\fontsize {27}{24}\color {rhocolor}\bfseries {P}});
 (lettrine.sty)             reported on input line 104.
-LaTeX Font Info:    Trying to load font information for TS1+stix2 on input line 109.
+
+
+LaTeX Warning: Reference `sec:algoritmi' on page 2 undefined on input line 117.
+
+
+LaTeX Warning: Reference `sec:metodologie' on page 2 undefined on input line 118.
+
+
+LaTeX Warning: Reference `sec:rezultate' on page 2 undefined on input line 119.
+
+
+LaTeX Warning: Reference `sec:concluzii' on page 2 undefined on input line 120.
+
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/b/n' in size <5> not available
+(Font)              Font shape `T1/FiraSans-OsF/bold/n' tried instead on input line 123.
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/bold/n' will be
+(Font)              scaled to size 5.0pt on input line 123.
+LaTeX Font Info:    Trying to load font information for T1+FiraMono-TOsF on input line 127.
+(c:/texlive/2026/texmf-dist/tex/latex/fira/T1FiraMono-TOsF.fd
+File: T1FiraMono-TOsF.fd 2019/10/10 (autoinst) Font definitions for T1/FiraMono-TOsF.
+)
+LaTeX Font Info:    Font shape `T1/FiraMono-TOsF/m/n' in size <9> not available
+(Font)              Font shape `T1/FiraMono-TOsF/regular/n' tried instead on input line 127.
+LaTeX Font Info:    Font shape `T1/FiraMono-TOsF/regular/n' will be
+(Font)              scaled to size 7.20003pt on input line 127.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `FiraMono-TOsF' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+LaTeX Font Info:    Font shape `T1/FiraMono-TOsF/m/n' in size <8> not available
+(Font)              Font shape `T1/FiraMono-TOsF/regular/n' tried instead on input line 127.
+LaTeX Font Info:    Font shape `T1/FiraMono-TOsF/regular/n' will be
+(Font)              scaled to size 6.40002pt on input line 127.
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/b/it' in size <8> not available
+(Font)              Font shape `T1/FiraSans-OsF/bold/it' tried instead on input line 145.
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/bold/it' will be
+(Font)              scaled to size 8.0pt on input line 145.
+Package mdframed Info: mdframed works in twoside mode on input line 181.
+\pydata@fh@0=\write7
+\openout7 = `_FAD58DE7366495DB4650CFEFAC2FCD61.data.minted'.
+
+runsystem(latexminted config  --timestamp 20260502170226 FAD58DE7366495DB4650CFEFAC2FCD61)...executed safely (allowed).
+
+ (./_FAD58DE7366495DB4650CFEFAC2FCD61.config.minted)
+runsystem(latexminted cleanconfig  --timestamp 20260502170226 FAD58DE7366495DB4650CFEFAC2FCD61)...executed safely (allowed).
+
+ (./_minted/friendly.style.minted) (./_minted/A671A6B59B4EAF2E3C0228F624956C27.highlight.minted
+Underfull \hbox (badness 10000) in paragraph at lines 187--1
+
+ []
+
+LaTeX Font Info:    Font shape `T1/FiraMono-TOsF/b/n' in size <8> not available
+(Font)              Font shape `T1/FiraMono-TOsF/bold/n' tried instead on input line 2.
+LaTeX Font Info:    Font shape `T1/FiraMono-TOsF/bold/n' will be
+(Font)              scaled to size 6.40002pt on input line 2.
+)
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 193.
+ [2{c:/texlive/2026/texmf-dist/fonts/enc/dvips/stix2-type1/stix2-t1.enc}{c:/texlive/2026/texmf-dist/fonts/enc/dvips/fira/fir_d4q673.enc}{c:/texlive/2026/texmf-dist/fonts/enc/dvips/stix2-type1/stix2-mathbb.enc}{c:/texlive/2026/texmf-dist/fonts/enc/dvips/stix2-type1/stix2-mathcal.enc}{c:/texlive/2026/texmf-dist/fonts/enc/dvips/stix2-type1/stix2-mathex.enc}{c:/texlive/2026/texmf-dist/fonts/enc/dvips/stix2-type1/stix2-mathscr.enc}] (./_minted/C84DD37B058AA2769824381278AD4D8D.highlight.minted) (./_minted/08A2088589D288CD7C2B3C7A1202AB91.highlight.minted
+LaTeX Font Info:    Font shape `T1/FiraMono-TOsF/m/n' in size <5> not available
+(Font)              Font shape `T1/FiraMono-TOsF/regular/n' tried instead on input line 3.
+LaTeX Font Info:    Font shape `T1/FiraMono-TOsF/regular/n' will be
+(Font)              scaled to size 4.00002pt on input line 3.
+)
+Underfull \hbox (badness 1014) in paragraph at lines 241--242
+\T1/FiraMono-TOsF/regular/n/9 merge\T1/stix2/m/n/9 (+20) , care com-bin  dou  sub[]iruri sor-tate într-unul sin-gur, []i
+ []
+
+(./_minted/9BB5307103E75004B4A1EB94BC451387.highlight.minted) [3{c:/texlive/2026/texmf-dist/fonts/enc/dvips/stix2-type1/stix2-mathsf.enc}] (./_minted/6153F391D869F5EBC84CF2131A323C59.highlight.minted)
+LaTeX Font Info:    Trying to load font information for TS1+stix2 on input line 320.
  (c:/texlive/2026/texmf-dist/tex/latex/stix2-type1/ts1stix2.fd
 File: ts1stix2.fd 2018/04/02 v2.0.0-latex stix2 TS1 font definitions
 )
 Package microtype Info: Character `textflorin ' is missing
 (microtype)             in font `TS1/stix2/m/n/9'.
 (microtype)             Ignoring protrusion settings for this character.
-LaTeX Font Info:    Trying to load font information for T1+FiraMono-TOsF on input line 109.
- (c:/texlive/2026/texmf-dist/tex/latex/fira/T1FiraMono-TOsF.fd
-File: T1FiraMono-TOsF.fd 2019/10/10 (autoinst) Font definitions for T1/FiraMono-TOsF.
-)
-LaTeX Font Info:    Font shape `T1/FiraMono-TOsF/m/n' in size <9> not available
-(Font)              Font shape `T1/FiraMono-TOsF/regular/n' tried instead on input line 109.
-LaTeX Font Info:    Font shape `T1/FiraMono-TOsF/regular/n' will be
-(Font)              scaled to size 7.20003pt on input line 109.
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `FiraMono-TOsF' (encoding: T1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
-LaTeX Font Info:    Font shape `T1/FiraMono-TOsF/m/n' in size <8> not available
-(Font)              Font shape `T1/FiraMono-TOsF/regular/n' tried instead on input line 109.
-LaTeX Font Info:    Font shape `T1/FiraMono-TOsF/regular/n' will be
-(Font)              scaled to size 6.40002pt on input line 109.
-<figures/Example.pdf, id=149, 210.7875pt x 174.6525pt>
+ (./_minted/D50460CD1B0506A6CF57501EBE74A33F.highlight.minted) [4{c:/texlive/2026/texmf-dist/fonts/enc/dvips/stix2-type1/stix2-ts1.enc}]
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/b/it' in size <5> not available
+(Font)              Font shape `T1/FiraSans-OsF/bold/it' tried instead on input line 379.
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/bold/it' will be
+(Font)              scaled to size 5.0pt on input line 379.
+
+Overfull \hbox (28.11238pt too wide) in paragraph at lines 449--470
+[][] 
+ []
+
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/m/it' in size <5> not available
+(Font)              Font shape `T1/FiraSans-OsF/regular/it' tried instead on input line 470.
+LaTeX Font Info:    Font shape `T1/FiraSans-OsF/regular/it' will be
+(Font)              scaled to size 5.0pt on input line 470.
+LaTeX Font Info:    Font shape `T1/FiraMono-TOsF/m/it' in size <7> not available
+(Font)              Font shape `T1/FiraMono-TOsF/regular/it' tried instead on input line 473.
+LaTeX Font Info:    Font shape `T1/FiraMono-TOsF/regular/it' in size <7> not available
+(Font)              Font shape `T1/FiraMono-TOsF/regular/sl' tried instead on input line 473.
+LaTeX Font Info:    Font shape `T1/FiraMono-TOsF/regular/sl' will be
+(Font)              scaled to size 5.60002pt on input line 473.
+
+LaTeX Warning: Reference `sec:rezultate' on page 5 undefined on input line 480.
+
+<figures/Example.pdf, id=302, 210.7875pt x 174.6525pt>
 File: figures/Example.pdf Graphic file (type pdf)
 <use figures/Example.pdf>
-Package pdftex.def Info: figures/Example.pdf  used on input line 161.
+Package pdftex.def Info: figures/Example.pdf  used on input line 504.
 (pdftex.def)             Requested size: 180.7308pt x 149.7505pt.
-LaTeX Font Info:    Font shape `T1/FiraSans-OsF/m/it' in size <7> not available
-(Font)              Font shape `T1/FiraSans-OsF/regular/it' tried instead on input line 188.
-LaTeX Font Info:    Font shape `T1/FiraSans-OsF/regular/it' will be
-(Font)              scaled to size 7.0pt on input line 188.
-Package mdframed Info: mdframed works in twoside mode on input line 204.
-LaTeX Font Info:    Font shape `T1/FiraSans-OsF/b/it' in size <8> not available
-(Font)              Font shape `T1/FiraSans-OsF/bold/it' tried instead on input line 211.
-LaTeX Font Info:    Font shape `T1/FiraSans-OsF/bold/it' will be
-(Font)              scaled to size 8.0pt on input line 211.
-LaTeX Font Info:    Font shape `T1/FiraSans-OsF/m/n' in size <5> not available
-(Font)              Font shape `T1/FiraSans-OsF/regular/n' tried instead on input line 214.
-LaTeX Font Info:    Font shape `T1/FiraSans-OsF/regular/n' will be
-(Font)              scaled to size 5.0pt on input line 214.
- [2{c:/texlive/2026/texmf-dist/fonts/enc/dvips/stix2-type1/stix2-t1.enc}{c:/texlive/2026/texmf-dist/fonts/enc/dvips/stix2-type1/stix2-ts1.enc}{c:/texlive/2026/texmf-dist/fonts/enc/dvips/fira/fir_d4q673.enc} <./figures/Example.pdf>]
-Package mdframed Info: mdframed works in twoside mode on input line 248.
-Package mdframed Info: mdframed works in twoside mode on input line 265.
-Package mdframed Info: mdframed works in twoside mode on input line 286.
-\pydata@fh@0=\write7
-\openout7 = `_FAD58DE7366495DB4650CFEFAC2FCD61.data.minted'.
 
-runsystem(latexminted config  --timestamp 20260423141909 FAD58DE7366495DB4650CFEFAC2FCD61)...executed safely (allowed).
+LaTeX Warning: Citation 'PFGPlots' on page 5 undefined on input line 505.
 
- (./_FAD58DE7366495DB4650CFEFAC2FCD61.config.minted)
-runsystem(latexminted cleanconfig  --timestamp 20260423141909 FAD58DE7366495DB4650CFEFAC2FCD61)...executed safely (allowed).
 
+LaTeX Warning: Citation 'PFGPlots' on page 5 undefined on input line 505.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [5]
+Package mdframed Info: mdframed works in twoside mode on input line 547.
+Package mdframed Info: mdframed works in twoside mode on input line 591.
+Package mdframed Info: mdframed works in twoside mode on input line 608.
+ [6{c:/texlive/2026/texmf-dist/fonts/enc/dvips/stix2-type1/stix2-mathrm-bold.enc} <./figures/Example.pdf>]
+Package mdframed Info: mdframed works in twoside mode on input line 629.
  (./_minted/lovelace.style.minted) (./_minted/73B9F45BA27F636A236A5316AB880D8E.highlight.minted
 LaTeX Font Info:    Font shape `T1/FiraMono-TOsF/m/it' in size <8> not available
 (Font)              Font shape `T1/FiraMono-TOsF/regular/it' tried instead on input line 2.
@@ -1825,50 +1923,57 @@ LaTeX Font Info:    Font shape `T1/FiraMono-TOsF/regular/it' in size <8> not ava
 (Font)              Font shape `T1/FiraMono-TOsF/regular/sl' tried instead on input line 2.
 LaTeX Font Info:    Font shape `T1/FiraMono-TOsF/regular/sl' will be
 (Font)              scaled to size 6.40002pt on input line 2.
-)
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 294.
- (c:/texlive/2026/texmf-dist/tex/latex/listings/lstlang1.sty
+) (c:/texlive/2026/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2025/11/14 1.11b listings language file
-) [3{c:/texlive/2026/texmf-dist/fonts/enc/dvips/stix2-type1/stix2-mathrm-bold.enc}{c:/texlive/2026/texmf-dist/fonts/enc/dvips/stix2-type1/stix2-mathex.enc}] (./example.py)
-Package mdframed Info: mdframed works in twoside mode on input line 341.
-LaTeX Font Info:    Trying to load font information for U+fontawesomefree1 on input line 383.
+) (./example.py)
+
+LaTeX Warning: Citation 'davis2023signalflow' on page 7 undefined on input line 671.
+
+
+LaTeX Warning: Citation 'bell2022codefont' on page 7 undefined on input line 671.
+
+[7]
+Package mdframed Info: mdframed works in twoside mode on input line 684.
+LaTeX Font Info:    Trying to load font information for U+fontawesomefree1 on input line 726.
  (c:/texlive/2026/texmf-dist/tex/latex/fontawesome5/ufontawesomefree1.fd)
-LaTeX Font Info:    Trying to load font information for U+fontawesomebrands0 on input line 385.
+LaTeX Font Info:    Trying to load font information for U+fontawesomebrands0 on input line 728.
  (c:/texlive/2026/texmf-dist/tex/latex/fontawesome5/ufontawesomebrands0.fd)
 LaTeX Font Info:    Font shape `U/fontawesomebrands0/solid/n' in size <9> not available
-(Font)              Font shape `U/fontawesomebrands0/regular/n' tried instead on input line 385.
-LaTeX Font Info:    Trying to load font information for U+fontawesomefree2 on input line 409.
- (c:/texlive/2026/texmf-dist/tex/latex/fontawesome5/ufontawesomefree2.fd) [4{c:/texlive/2026/texmf-dist/fonts/enc/dvips/fontawesome5/fa5free1.enc}{c:/texlive/2026/texmf-dist/fonts/enc/dvips/fontawesome5/fa5brands0.enc}{c:/texlive/2026/texmf-dist/fonts/enc/dvips/fontawesome5/fa5free2.enc}]
-LaTeX Font Info:    Trying to load font information for U+fontawesomebrands1 on input line 421.
+(Font)              Font shape `U/fontawesomebrands0/regular/n' tried instead on input line 728.
+LaTeX Font Info:    Trying to load font information for U+fontawesomefree2 on input line 752.
+ (c:/texlive/2026/texmf-dist/tex/latex/fontawesome5/ufontawesomefree2.fd)
+LaTeX Font Info:    Trying to load font information for U+fontawesomebrands1 on input line 764.
  (c:/texlive/2026/texmf-dist/tex/latex/fontawesome5/ufontawesomebrands1.fd)
 LaTeX Font Info:    Font shape `U/fontawesomebrands1/solid/n' in size <9> not available
-(Font)              Font shape `U/fontawesomebrands1/regular/n' tried instead on input line 421.
- [5{c:/texlive/2026/texmf-dist/fonts/enc/dvips/fontawesome5/fa5brands1.enc}{c:/texlive/2026/texmf-dist/fonts/enc/dvips/stix2-type1/stix2-t1sc.enc}
-
-] 
+(Font)              Font shape `U/fontawesomebrands1/regular/n' tried instead on input line 764.
+ [8{c:/texlive/2026/texmf-dist/fonts/enc/dvips/fontawesome5/fa5free1.enc}{c:/texlive/2026/texmf-dist/fonts/enc/dvips/fontawesome5/fa5brands0.enc}{c:/texlive/2026/texmf-dist/fonts/enc/dvips/fontawesome5/fa5free2.enc}{c:/texlive/2026/texmf-dist/fonts/enc/dvips/fontawesome5/fa5brands1.enc}{c:/texlive/2026/texmf-dist/fonts/enc/dvips/stix2-type1/stix2-t1sc.enc}] 
 enddocument/afterlastpage (AED): lastpage setting LastPage.
 (./main.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-01-19>
  ***********
+
+
+LaTeX Warning: There were undefined references.
+
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 58295 strings out of 467525
- 1187468 string characters out of 5423209
- 2346292 words of memory out of 5000000
- 85892 multiletter control sequences out of 15000+600000
- 1185090 words of font info for 468 fonts, out of 8000000 for 9000
+ 58602 strings out of 467525
+ 1197125 string characters out of 5423209
+ 2368382 words of memory out of 5000000
+ 86048 multiletter control sequences out of 15000+600000
+ 1251787 words of font info for 533 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 137i,19n,143p,1076b,1947s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<c:/texlive/2026/texmf-dist/fonts/type1/public/fira/FiraMono-Oblique.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/fira/FiraMono-Regular.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/fira/FiraSans-Bold.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/fira/FiraSans-BoldItalic.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/fira/FiraSans-Italic.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/fira/FiraSans-Regular.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/fontawesome5/FontAwesome5Brands-Regular.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/fontawesome5/FontAwesome5Free-Solid.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/stix2-type1/STIX2Math.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/stix2-type1/STIX2Text-Bold.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/stix2-type1/STIX2Text-Italic.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/stix2-type1/STIX2Text-Regular.pfb>
-Output written on main.pdf (5 pages, 1031225 bytes).
+ 137i,20n,143p,1076b,2040s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2026/texmf-dist/fonts/type1/public/fira/FiraMono-Bold.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/fira/FiraMono-Oblique.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/fira/FiraMono-Regular.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/fira/FiraSans-Bold.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/fira/FiraSans-BoldItalic.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/fira/FiraSans-Italic.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/fira/FiraSans-Regular.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/fontawesome5/FontAwesome5Brands-Regular.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/fontawesome5/FontAwesome5Free-Solid.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/stix2-type1/STIX2Math.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/stix2-type1/STIX2Text-Bold.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/stix2-type1/STIX2Text-Italic.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/stix2-type1/STIX2Text-Regular.pfb>
+Output written on main.pdf (8 pages, 1149686 bytes).
 PDF statistics:
- 471 PDF objects out of 1000 (max. 8388607)
- 363 compressed objects within 4 object streams
- 76 named destinations out of 1000 (max. 500000)
- 124850 words of extra memory for PDF output out of 128383 (max. 10000000)
+ 707 PDF objects out of 1000 (max. 8388607)
+ 574 compressed objects within 6 object streams
+ 122 named destinations out of 1000 (max. 500000)
+ 140842 words of extra memory for PDF output out of 154059 (max. 10000000)
 

@@ -1,0 +1,32 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{k+kt}{void}\PYG{+w}{ }\PYG{n+nf}{sleepSort}\PYG{p}{(}\PYG{n}{std}\PYG{o}{::}\PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{o}{\PYGZgt{}\PYGZam{}}\PYG{+w}{ }\PYG{n}{v}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{    }\PYG{n}{std}\PYG{o}{::}\PYG{n}{mutex}\PYG{+w}{ }\PYG{n}{mtx}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{std}\PYG{o}{::}\PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{n}{r}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{n}{v}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{v}\PYG{p}{.}\PYG{n}{clear}\PYG{p}{();}
+
+\PYG{+w}{    }\PYG{n}{std}\PYG{o}{::}\PYG{n}{unordered\PYGZus{}map}\PYG{o}{\PYGZlt{}}\PYG{k+kt}{int}\PYG{p}{,}\PYG{+w}{ }\PYG{k+kt}{int}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{n}{freq}\PYG{p}{;}
+\PYG{+w}{    }\PYG{k}{for}\PYG{+w}{ }\PYG{p}{(}\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{e}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{n}{r}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{e}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{)}
+\PYG{+w}{            }\PYG{k}{throw}\PYG{+w}{ }\PYG{n}{std}\PYG{o}{::}\PYG{n}{range\PYGZus{}error}\PYG{p}{(}
+\PYG{+w}{                }\PYG{l+s}{\PYGZdq{}Sleep sort cannot handle negative numbers: \PYGZdq{}}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }
+\PYG{+w}{                }\PYG{n}{std}\PYG{o}{::}\PYG{n}{to\PYGZus{}string}\PYG{p}{(}\PYG{n}{e}\PYG{p}{));}
+\PYG{+w}{        }\PYG{n}{freq}\PYG{p}{[}\PYG{n}{e}\PYG{p}{]}\PYG{o}{++}\PYG{p}{;}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+
+\PYG{+w}{    }\PYG{n}{std}\PYG{o}{::}\PYG{n}{vector}\PYG{o}{\PYGZlt{}}\PYG{n}{std}\PYG{o}{::}\PYG{k+kr}{thread}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{n}{ths}\PYG{p}{;}
+\PYG{+w}{    }\PYG{n}{ths}\PYG{p}{.}\PYG{n}{reserve}\PYG{p}{(}\PYG{n}{freq}\PYG{p}{.}\PYG{n}{size}\PYG{p}{());}
+
+\PYG{+w}{    }\PYG{k}{for}\PYG{+w}{ }\PYG{p}{(}\PYG{k}{auto}\PYG{o}{\PYGZam{}}\PYG{+w}{ }\PYG{p}{[}\PYG{n}{val}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{count}\PYG{p}{]}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{n}{freq}\PYG{p}{)}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{        }\PYG{n}{ths}\PYG{p}{.}\PYG{n}{push\PYGZus{}back}\PYG{p}{(}\PYG{n}{std}\PYG{o}{::}\PYG{k+kr}{thread}\PYG{p}{([}\PYG{n}{val}\PYG{p}{,}\PYG{+w}{ }\PYG{n}{count}\PYG{p}{,}\PYG{+w}{ }\PYG{o}{\PYGZam{}}\PYG{n}{v}\PYG{p}{,}\PYG{+w}{ }\PYG{o}{\PYGZam{}}\PYG{n}{mtx}\PYG{p}{]()}\PYG{+w}{ }\PYG{p}{\PYGZob{}}
+\PYG{+w}{            }\PYG{n}{std}\PYG{o}{::}\PYG{n}{this\PYGZus{}thread}\PYG{o}{::}\PYG{n}{sleep\PYGZus{}for}\PYG{p}{(}
+\PYG{+w}{                }\PYG{n}{std}\PYG{o}{::}\PYG{n}{chrono}\PYG{o}{::}\PYG{n}{milliseconds}\PYG{p}{((}\PYG{n}{val}\PYG{+w}{ }\PYG{o}{+}\PYG{+w}{ }\PYG{l+m+mi}{1}\PYG{p}{)}\PYG{+w}{ }\PYG{o}{*}\PYG{+w}{ }\PYG{l+m+mi}{100}\PYG{p}{));}
+\PYG{+w}{            }\PYG{n}{std}\PYG{o}{::}\PYG{n}{lock\PYGZus{}guard}\PYG{o}{\PYGZlt{}}\PYG{n}{std}\PYG{o}{::}\PYG{n}{mutex}\PYG{o}{\PYGZgt{}}\PYG{+w}{ }\PYG{n}{lock}\PYG{p}{(}\PYG{n}{mtx}\PYG{p}{);}
+\PYG{+w}{            }\PYG{k}{for}\PYG{+w}{ }\PYG{p}{(}\PYG{k+kt}{int}\PYG{+w}{ }\PYG{n}{i}\PYG{+w}{ }\PYG{o}{=}\PYG{+w}{ }\PYG{l+m+mi}{0}\PYG{p}{;}\PYG{+w}{ }\PYG{n}{i}\PYG{+w}{ }\PYG{o}{\PYGZlt{}}\PYG{+w}{ }\PYG{n}{count}\PYG{p}{;}\PYG{+w}{ }\PYG{n}{i}\PYG{o}{++}\PYG{p}{)}
+\PYG{+w}{                }\PYG{n}{v}\PYG{p}{.}\PYG{n}{push\PYGZus{}back}\PYG{p}{(}\PYG{n}{val}\PYG{p}{);}
+\PYG{+w}{        }\PYG{p}{\PYGZcb{}));}
+\PYG{+w}{    }\PYG{p}{\PYGZcb{}}
+
+\PYG{+w}{    }\PYG{k}{for}\PYG{+w}{ }\PYG{p}{(}\PYG{k}{auto}\PYG{o}{\PYGZam{}}\PYG{+w}{ }\PYG{n}{t}\PYG{+w}{ }\PYG{o}{:}\PYG{+w}{ }\PYG{n}{ths}\PYG{p}{)}
+\PYG{+w}{        }\PYG{k}{if}\PYG{+w}{ }\PYG{p}{(}\PYG{n}{t}\PYG{p}{.}\PYG{n}{joinable}\PYG{p}{())}\PYG{+w}{ }\PYG{n}{t}\PYG{p}{.}\PYG{n}{join}\PYG{p}{();}
+\PYG{p}{\PYGZcb{}}
+\end{MintedVerbatim}

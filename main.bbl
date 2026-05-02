@@ -19,110 +19,492 @@
 
 \refsection{0}
   \datalist[entry]{ynt/global//global/global/global}
-    \entry{bell2022codefont}{article}{}{}
-      \name{author}{3}{}{%
-        {{hash=d62ca436be2bc504a33772baa3eefcdd}{%
-           family={Bell},
-           familyi={B\bibinitperiod},
-           given={Evan},
-           giveni={E\bibinitperiod}}}%
-        {{hash=d2b2208f815ae16827b64ee29c44b5b8}{%
-           family={Moss},
-           familyi={M\bibinitperiod},
-           given={Clara},
-           giveni={C\bibinitperiod}}}%
-        {{hash=3225b4c384602bfd669d6323ac07bc99}{%
-           family={Yu},
-           familyi={Y\bibinitperiod},
-           given={Daren},
-           giveni={D\bibinitperiod}}}%
-      }
-      \strng{namehash}{a0fc76660eb1905c665eb3791b591cba}
-      \strng{fullhash}{f9f7bbd974928934ec89422cdf9fdd26}
-      \strng{fullhashraw}{f9f7bbd974928934ec89422cdf9fdd26}
-      \strng{bibnamehash}{f9f7bbd974928934ec89422cdf9fdd26}
-      \strng{authorbibnamehash}{f9f7bbd974928934ec89422cdf9fdd26}
-      \strng{authornamehash}{a0fc76660eb1905c665eb3791b591cba}
-      \strng{authorfullhash}{f9f7bbd974928934ec89422cdf9fdd26}
-      \strng{authorfullhashraw}{f9f7bbd974928934ec89422cdf9fdd26}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{Journal of Technical Typography}
-      \field{number}{1}
-      \field{title}{The Impact of Monospaced Font Ligatures on Code Readability in Scientific Documentation}
-      \field{volume}{7}
-      \field{year}{2022}
-      \field{pages}{33\bibrangedash 47}
-      \range{pages}{15}
-      \verb{doi}
-      \verb 10.8888/jtt.2022.00701
-      \endverb
-    \endentry
-    \entry{davis2023signalflow}{article}{}{}
-      \name{author}{2}{}{%
-        {{hash=f158946309ad433a25baacdbc9d39df4}{%
-           family={Davis},
-           familyi={D\bibinitperiod},
-           given={Lena},
-           giveni={L\bibinitperiod}}}%
-        {{hash=cf3afdba3c9d6650fd7a250fc8678bed}{%
-           family={Kim},
-           familyi={K\bibinitperiod},
-           given={Nora},
-           giveni={N\bibinitperiod}}}%
-      }
-      \strng{namehash}{dd0b7c244ab213ce19968baa55ea9e37}
-      \strng{fullhash}{dd0b7c244ab213ce19968baa55ea9e37}
-      \strng{fullhashraw}{dd0b7c244ab213ce19968baa55ea9e37}
-      \strng{bibnamehash}{dd0b7c244ab213ce19968baa55ea9e37}
-      \strng{authorbibnamehash}{dd0b7c244ab213ce19968baa55ea9e37}
-      \strng{authornamehash}{dd0b7c244ab213ce19968baa55ea9e37}
-      \strng{authorfullhash}{dd0b7c244ab213ce19968baa55ea9e37}
-      \strng{authorfullhashraw}{dd0b7c244ab213ce19968baa55ea9e37}
-      \field{sortinit}{2}
-      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{journaltitle}{International Journal of Biomedical Computing}
-      \field{number}{4}
-      \field{title}{SignalFlow: A Modular Framework for Real-Time Physiological Data Visualization}
-      \field{volume}{15}
-      \field{year}{2023}
-      \field{pages}{78\bibrangedash 92}
-      \range{pages}{15}
-      \verb{doi}
-      \verb 10.9999/ijbc.2023.01504
-      \endverb
-    \endentry
-    \entry{PFGPlots}{misc}{}{}
+    \entry{hoare1961quicksort}{article}{}{}
       \name{author}{1}{}{%
-        {{hash=675154bb26f4fcccf8f7e70a9fb6cfd7}{%
-           family={PFGPlots},
-           familyi={P\bibinitperiod}}}%
+        {{hash=d6facc8397f631d3ef01dd70be993640}{%
+           family={Hoare},
+           familyi={H\bibinitperiod},
+           given={C.\bibnamedelimi A.\bibnamedelimi R.},
+           giveni={C\bibinitperiod\bibinitdelim A\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
       }
-      \strng{namehash}{675154bb26f4fcccf8f7e70a9fb6cfd7}
-      \strng{fullhash}{675154bb26f4fcccf8f7e70a9fb6cfd7}
-      \strng{fullhashraw}{675154bb26f4fcccf8f7e70a9fb6cfd7}
-      \strng{bibnamehash}{675154bb26f4fcccf8f7e70a9fb6cfd7}
-      \strng{authorbibnamehash}{675154bb26f4fcccf8f7e70a9fb6cfd7}
-      \strng{authornamehash}{675154bb26f4fcccf8f7e70a9fb6cfd7}
-      \strng{authorfullhash}{675154bb26f4fcccf8f7e70a9fb6cfd7}
-      \strng{authorfullhashraw}{675154bb26f4fcccf8f7e70a9fb6cfd7}
-      \field{sortinit}{9}
-      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \strng{namehash}{d6facc8397f631d3ef01dd70be993640}
+      \strng{fullhash}{d6facc8397f631d3ef01dd70be993640}
+      \strng{fullhashraw}{d6facc8397f631d3ef01dd70be993640}
+      \strng{bibnamehash}{d6facc8397f631d3ef01dd70be993640}
+      \strng{authorbibnamehash}{d6facc8397f631d3ef01dd70be993640}
+      \strng{authornamehash}{d6facc8397f631d3ef01dd70be993640}
+      \strng{authorfullhash}{d6facc8397f631d3ef01dd70be993640}
+      \strng{authorfullhashraw}{d6facc8397f631d3ef01dd70be993640}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{A LaTeX package to create plots.}
-      \verb{urlraw}
-      \verb https://pgfplots.sourceforge.net/
+      \field{journaltitle}{Communications of the ACM}
+      \field{number}{7}
+      \field{title}{Algorithm 64: Quicksort}
+      \field{volume}{4}
+      \field{year}{1961}
+      \field{pages}{321}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1145/366622.366644
       \endverb
-      \verb{url}
-      \verb https://pgfplots.sourceforge.net/
+    \endentry
+    \entry{dijkstra1976discipline}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=2066778d476d4368455cb8e3ba6d03b4}{%
+           family={Dijkstra},
+           familyi={D\bibinitperiod},
+           given={Edsger\bibnamedelima W.},
+           giveni={E\bibinitperiod\bibinitdelim W\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Prentice Hall}%
+      }
+      \strng{namehash}{2066778d476d4368455cb8e3ba6d03b4}
+      \strng{fullhash}{2066778d476d4368455cb8e3ba6d03b4}
+      \strng{fullhashraw}{2066778d476d4368455cb8e3ba6d03b4}
+      \strng{bibnamehash}{2066778d476d4368455cb8e3ba6d03b4}
+      \strng{authorbibnamehash}{2066778d476d4368455cb8e3ba6d03b4}
+      \strng{authornamehash}{2066778d476d4368455cb8e3ba6d03b4}
+      \strng{authorfullhash}{2066778d476d4368455cb8e3ba6d03b4}
+      \strng{authorfullhashraw}{2066778d476d4368455cb8e3ba6d03b4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{A Discipline of Programming}
+      \field{year}{1976}
+    \endentry
+    \entry{musser1997introsort}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=275cfd8ff6a2299f5e96b34576b5832f}{%
+           family={Musser},
+           familyi={M\bibinitperiod},
+           given={David\bibnamedelima R.},
+           giveni={D\bibinitperiod\bibinitdelim R\bibinitperiod}}}%
+      }
+      \strng{namehash}{275cfd8ff6a2299f5e96b34576b5832f}
+      \strng{fullhash}{275cfd8ff6a2299f5e96b34576b5832f}
+      \strng{fullhashraw}{275cfd8ff6a2299f5e96b34576b5832f}
+      \strng{bibnamehash}{275cfd8ff6a2299f5e96b34576b5832f}
+      \strng{authorbibnamehash}{275cfd8ff6a2299f5e96b34576b5832f}
+      \strng{authornamehash}{275cfd8ff6a2299f5e96b34576b5832f}
+      \strng{authorfullhash}{275cfd8ff6a2299f5e96b34576b5832f}
+      \strng{authorfullhashraw}{275cfd8ff6a2299f5e96b34576b5832f}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Software: Practice and Experience}
+      \field{number}{8}
+      \field{title}{Introspective Sorting and Selection Algorithms}
+      \field{volume}{27}
+      \field{year}{1997}
+      \field{pages}{983\bibrangedash 993}
+      \range{pages}{11}
+      \verb{doi}
+      \verb 10.1002/(SICI)1097-024X(199708)27:8<983::AID-SPE117>3.0.CO;2-#
       \endverb
+    \endentry
+    \entry{knuth1998sorting}{book}{}{}
+      \name{author}{1}{}{%
+        {{hash=ec08e6f01da5f3814f28a70c89c64656}{%
+           family={Knuth},
+           familyi={K\bibinitperiod},
+           given={Donald\bibnamedelima E.},
+           giveni={D\bibinitperiod\bibinitdelim E\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Addison-Wesley}%
+      }
+      \strng{namehash}{ec08e6f01da5f3814f28a70c89c64656}
+      \strng{fullhash}{ec08e6f01da5f3814f28a70c89c64656}
+      \strng{fullhashraw}{ec08e6f01da5f3814f28a70c89c64656}
+      \strng{bibnamehash}{ec08e6f01da5f3814f28a70c89c64656}
+      \strng{authorbibnamehash}{ec08e6f01da5f3814f28a70c89c64656}
+      \strng{authornamehash}{ec08e6f01da5f3814f28a70c89c64656}
+      \strng{authorfullhash}{ec08e6f01da5f3814f28a70c89c64656}
+      \strng{authorfullhashraw}{ec08e6f01da5f3814f28a70c89c64656}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{2}
+      \field{title}{The Art of Computer Programming, Volume 3: Sorting and Searching}
+      \field{year}{1998}
+    \endentry
+    \entry{timsort}{report}{}{}
+      \name{author}{1}{}{%
+        {{hash=e3aa619a4412763613574bb6b6fc1510}{%
+           family={Peters},
+           familyi={P\bibinitperiod},
+           given={Tim},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {Python Software Foundation}%
+      }
+      \strng{namehash}{e3aa619a4412763613574bb6b6fc1510}
+      \strng{fullhash}{e3aa619a4412763613574bb6b6fc1510}
+      \strng{fullhashraw}{e3aa619a4412763613574bb6b6fc1510}
+      \strng{bibnamehash}{e3aa619a4412763613574bb6b6fc1510}
+      \strng{authorbibnamehash}{e3aa619a4412763613574bb6b6fc1510}
+      \strng{authornamehash}{e3aa619a4412763613574bb6b6fc1510}
+      \strng{authorfullhash}{e3aa619a4412763613574bb6b6fc1510}
+      \strng{authorfullhashraw}{e3aa619a4412763613574bb6b6fc1510}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://bugs.python.org/file4451/timsort.txt}}
+      \field{title}{Timsort}
+      \field{type}{techreport}
+      \field{year}{2002}
+    \endentry
+    \entry{astrachan2003bubble}{inproceedings}{}{}
+      \name{author}{1}{}{%
+        {{hash=248a246720ccfa39c833d3de93fb8cc8}{%
+           family={Astrachan},
+           familyi={A\bibinitperiod},
+           given={Owen},
+           giveni={O\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {ACM}%
+      }
+      \strng{namehash}{248a246720ccfa39c833d3de93fb8cc8}
+      \strng{fullhash}{248a246720ccfa39c833d3de93fb8cc8}
+      \strng{fullhashraw}{248a246720ccfa39c833d3de93fb8cc8}
+      \strng{bibnamehash}{248a246720ccfa39c833d3de93fb8cc8}
+      \strng{authorbibnamehash}{248a246720ccfa39c833d3de93fb8cc8}
+      \strng{authornamehash}{248a246720ccfa39c833d3de93fb8cc8}
+      \strng{authorfullhash}{248a246720ccfa39c833d3de93fb8cc8}
+      \strng{authorfullhashraw}{248a246720ccfa39c833d3de93fb8cc8}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the 34th SIGCSE Technical Symposium}
+      \field{title}{Bubble Sort: An Archaeological Algorithmic Analysis}
+      \field{year}{2003}
+      \field{pages}{1\bibrangedash 5}
+      \range{pages}{5}
+    \endentry
+    \entry{bender2006insertionislogn}{article}{}{}
+      \name{author}{3}{}{%
+        {{hash=48cf5495da7e7994fdb3355d1c93b02f}{%
+           family={Bender},
+           familyi={B\bibinitperiod},
+           given={Michael},
+           giveni={M\bibinitperiod}}}%
+        {{hash=9f27630f7ecbd81102be7007c9df29d5}{%
+           family={Farach-Colton},
+           familyi={F\bibinithyphendelim C\bibinitperiod},
+           given={Martín},
+           giveni={M\bibinitperiod}}}%
+        {{hash=90d866b5e3046dbaa0454cd7c4b5bec3}{%
+           family={Mosteiro},
+           familyi={M\bibinitperiod},
+           given={Miguel},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{3f2e610b8e753dbefada3aca540edb2f}
+      \strng{fullhash}{3722ea438288e92012eba0a1415b4797}
+      \strng{fullhashraw}{3722ea438288e92012eba0a1415b4797}
+      \strng{bibnamehash}{3722ea438288e92012eba0a1415b4797}
+      \strng{authorbibnamehash}{3722ea438288e92012eba0a1415b4797}
+      \strng{authornamehash}{3f2e610b8e753dbefada3aca540edb2f}
+      \strng{authorfullhash}{3722ea438288e92012eba0a1415b4797}
+      \strng{authorfullhashraw}{3722ea438288e92012eba0a1415b4797}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Theory of Computing Systems}
+      \field{title}{Insertion Sort is $O(n \log n)$}
+      \field{volume}{39}
+      \field{year}{2006}
+      \field{pages}{391\bibrangedash 397}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1007/s00224-005-1237-z
+      \endverb
+    \endentry
+    \entry{4chan2011sleepsort}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=7079c72c21415131774625ba1d64f4b0}{%
+           family={{Anonymous}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{7079c72c21415131774625ba1d64f4b0}
+      \strng{fullhash}{7079c72c21415131774625ba1d64f4b0}
+      \strng{fullhashraw}{7079c72c21415131774625ba1d64f4b0}
+      \strng{bibnamehash}{7079c72c21415131774625ba1d64f4b0}
+      \strng{authorbibnamehash}{7079c72c21415131774625ba1d64f4b0}
+      \strng{authornamehash}{7079c72c21415131774625ba1d64f4b0}
+      \strng{authorfullhash}{7079c72c21415131774625ba1d64f4b0}
+      \strng{authorfullhashraw}{7079c72c21415131774625ba1d64f4b0}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{4chan /prog/, arhivat la \url{https://archive.fo/xhGo}}
+      \field{title}{Genius sorting algorithm: Sleep Sort}
+      \field{year}{2011}
+    \endentry
+    \entry{princeton_sleepsort}{misc}{}{}
+      \name{author}{2}{}{%
+        {{hash=6a9c16ef79ae932cd7e8bc985da5a937}{%
+           family={Sedgewick},
+           familyi={S\bibinitperiod},
+           given={Robert},
+           giveni={R\bibinitperiod}}}%
+        {{hash=e1a92f1c9f96cee95b961648633c39f3}{%
+           family={Wayne},
+           familyi={W\bibinitperiod},
+           given={Kevin},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{edfb19f5da0b049e901748a2f782f877}
+      \strng{fullhash}{edfb19f5da0b049e901748a2f782f877}
+      \strng{fullhashraw}{edfb19f5da0b049e901748a2f782f877}
+      \strng{bibnamehash}{edfb19f5da0b049e901748a2f782f877}
+      \strng{authorbibnamehash}{edfb19f5da0b049e901748a2f782f877}
+      \strng{authornamehash}{edfb19f5da0b049e901748a2f782f877}
+      \strng{authorfullhash}{edfb19f5da0b049e901748a2f782f877}
+      \strng{authorfullhashraw}{edfb19f5da0b049e901748a2f782f877}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Princeton University COS226, \url{https://www.cs.princeton.edu/courses/archive/fall13/cos226/lectures/52Tries.pdf}}
+      \field{title}{Algorithms, 4th Edition --- Lecture Slides: Tries}
+      \field{year}{2013}
+    \endentry
+    \entry{tanenbaum2014modern}{book}{}{}
+      \name{author}{2}{}{%
+        {{hash=2414455c999bc471f803cd14fdea939d}{%
+           family={Tanenbaum},
+           familyi={T\bibinitperiod},
+           given={Andrew\bibnamedelima S.},
+           giveni={A\bibinitperiod\bibinitdelim S\bibinitperiod}}}%
+        {{hash=02997b67b6ffe1ea8e813dd2f362f33d}{%
+           family={Bos},
+           familyi={B\bibinitperiod},
+           given={Herbert},
+           giveni={H\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Pearson}%
+      }
+      \strng{namehash}{da75650913b9d6ae1cb262f4e7389a5c}
+      \strng{fullhash}{da75650913b9d6ae1cb262f4e7389a5c}
+      \strng{fullhashraw}{da75650913b9d6ae1cb262f4e7389a5c}
+      \strng{bibnamehash}{da75650913b9d6ae1cb262f4e7389a5c}
+      \strng{authorbibnamehash}{da75650913b9d6ae1cb262f4e7389a5c}
+      \strng{authornamehash}{da75650913b9d6ae1cb262f4e7389a5c}
+      \strng{authorfullhash}{da75650913b9d6ae1cb262f4e7389a5c}
+      \strng{authorfullhashraw}{da75650913b9d6ae1cb262f4e7389a5c}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{edition}{4}
+      \field{title}{Modern Operating Systems}
+      \field{year}{2014}
+    \endentry
+    \entry{devto_sleepsort}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=2b9ccc49cbca132159e56021799c5825}{%
+           family={Rao},
+           familyi={R\bibinitperiod},
+           given={Sishaar},
+           giveni={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{2b9ccc49cbca132159e56021799c5825}
+      \strng{fullhash}{2b9ccc49cbca132159e56021799c5825}
+      \strng{fullhashraw}{2b9ccc49cbca132159e56021799c5825}
+      \strng{bibnamehash}{2b9ccc49cbca132159e56021799c5825}
+      \strng{authorbibnamehash}{2b9ccc49cbca132159e56021799c5825}
+      \strng{authornamehash}{2b9ccc49cbca132159e56021799c5825}
+      \strng{authorfullhash}{2b9ccc49cbca132159e56021799c5825}
+      \strng{authorfullhashraw}{2b9ccc49cbca132159e56021799c5825}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{DEV Community, \url{https://dev.to/sishaarrao/sleep-sort-where-theory-meets-sobering-reality-b3m}}
+      \field{title}{Sleep Sort: Where Theory meets Sobering Reality}
+      \field{year}{2017}
+    \endentry
+    \entry{opengenus_sleepsort}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=8d357055f9eb6df706bf27cc71cc353a}{%
+           family={{OpenGenus Foundation}},
+           familyi={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{8d357055f9eb6df706bf27cc71cc353a}
+      \strng{fullhash}{8d357055f9eb6df706bf27cc71cc353a}
+      \strng{fullhashraw}{8d357055f9eb6df706bf27cc71cc353a}
+      \strng{bibnamehash}{8d357055f9eb6df706bf27cc71cc353a}
+      \strng{authorbibnamehash}{8d357055f9eb6df706bf27cc71cc353a}
+      \strng{authornamehash}{8d357055f9eb6df706bf27cc71cc353a}
+      \strng{authorfullhash}{8d357055f9eb6df706bf27cc71cc353a}
+      \strng{authorfullhashraw}{8d357055f9eb6df706bf27cc71cc353a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://iq.opengenus.org/sleep-sort/}}
+      \field{title}{Sleep Sort}
+      \field{year}{2019}
+    \endentry
+    \entry{geeksforgeeks_sleepsort}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=f1e069787ece74531d112559945c6871}{%
+           family={{GeeksforGeeks}},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{f1e069787ece74531d112559945c6871}
+      \strng{fullhash}{f1e069787ece74531d112559945c6871}
+      \strng{fullhashraw}{f1e069787ece74531d112559945c6871}
+      \strng{bibnamehash}{f1e069787ece74531d112559945c6871}
+      \strng{authorbibnamehash}{f1e069787ece74531d112559945c6871}
+      \strng{authornamehash}{f1e069787ece74531d112559945c6871}
+      \strng{authorfullhash}{f1e069787ece74531d112559945c6871}
+      \strng{authorfullhashraw}{f1e069787ece74531d112559945c6871}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.geeksforgeeks.org/sleep-sort-king-laziness-sorting-sleeping/}}
+      \field{title}{Sleep Sort -- The King of Laziness}
+      \field{year}{2023}
+    \endentry
+    \entry{henney2023sleepsort}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=8c4313b47fea05c49f1b7b0f91f8d275}{%
+           family={Henney},
+           familyi={H\bibinitperiod},
+           given={Kevlin},
+           giveni={K\bibinitperiod}}}%
+      }
+      \strng{namehash}{8c4313b47fea05c49f1b7b0f91f8d275}
+      \strng{fullhash}{8c4313b47fea05c49f1b7b0f91f8d275}
+      \strng{fullhashraw}{8c4313b47fea05c49f1b7b0f91f8d275}
+      \strng{bibnamehash}{8c4313b47fea05c49f1b7b0f91f8d275}
+      \strng{authorbibnamehash}{8c4313b47fea05c49f1b7b0f91f8d275}
+      \strng{authornamehash}{8c4313b47fea05c49f1b7b0f91f8d275}
+      \strng{authorfullhash}{8c4313b47fea05c49f1b7b0f91f8d275}
+      \strng{authorfullhashraw}{8c4313b47fea05c49f1b7b0f91f8d275}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://accu.org/journals/overload/31/175/henney/}}
+      \field{journaltitle}{ACCU Overload}
+      \field{number}{175}
+      \field{title}{Need Something Sorted? Sleep On It!}
+      \field{volume}{31}
+      \field{year}{2023}
+    \endentry
+    \entry{cppreference_sort}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=ccb2e96d41753ca525a50baa0f70c147}{%
+           family={{cppreference.com}},
+           familyi={c\bibinitperiod}}}%
+      }
+      \strng{namehash}{ccb2e96d41753ca525a50baa0f70c147}
+      \strng{fullhash}{ccb2e96d41753ca525a50baa0f70c147}
+      \strng{fullhashraw}{ccb2e96d41753ca525a50baa0f70c147}
+      \strng{bibnamehash}{ccb2e96d41753ca525a50baa0f70c147}
+      \strng{authorbibnamehash}{ccb2e96d41753ca525a50baa0f70c147}
+      \strng{authornamehash}{ccb2e96d41753ca525a50baa0f70c147}
+      \strng{authorfullhash}{ccb2e96d41753ca525a50baa0f70c147}
+      \strng{authorfullhashraw}{ccb2e96d41753ca525a50baa0f70c147}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://en.cppreference.com/w/cpp/algorithm/sort}}
+      \field{note}{Accesat: 2024}
+      \field{title}{std::sort}
+      \field{year}{2024}
+    \endentry
+    \entry{gcc_stl_algo}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=123b4717303fedc18092022ba8251828}{%
+           family={{GCC libstdc++ contributors}},
+           familyi={G\bibinitperiod}}}%
+      }
+      \strng{namehash}{123b4717303fedc18092022ba8251828}
+      \strng{fullhash}{123b4717303fedc18092022ba8251828}
+      \strng{fullhashraw}{123b4717303fedc18092022ba8251828}
+      \strng{bibnamehash}{123b4717303fedc18092022ba8251828}
+      \strng{authorbibnamehash}{123b4717303fedc18092022ba8251828}
+      \strng{authornamehash}{123b4717303fedc18092022ba8251828}
+      \strng{authorfullhash}{123b4717303fedc18092022ba8251828}
+      \strng{authorfullhashraw}{123b4717303fedc18092022ba8251828}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://github.com/gcc-mirror/gcc/blob/master/libstdc++-v3/include/bits/stl_algo.h}}
+      \field{note}{Accesat: 2024}
+      \field{title}{stl\_algo.h --- {GNU} {C++} Standard Library Source}
+      \field{year}{2024}
+    \endentry
+    \entry{microsoft_timers}{misc}{}{}
+      \name{author}{1}{}{%
+        {{hash=140864078aeca1c7c35b4beb33c53c34}{%
+           family={{Microsoft}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{fullhash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{fullhashraw}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{bibnamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authorbibnamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authornamehash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authorfullhash}{140864078aeca1c7c35b4beb33c53c34}
+      \strng{authorfullhashraw}{140864078aeca1c7c35b4beb33c53c34}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://learn.microsoft.com/en-us/windows/win32/winmsg/wm-timer}}
+      \field{title}{Timer Resolution}
+      \field{year}{2024}
+    \endentry
+    \entry{cppreference_map}{misc}{}{}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://en.cppreference.com/w/cpp/container/map}}
+      \field{title}{std::map}
+      \field{year}{2024}
+    \endentry
+    \entry{cppreference_sleep}{misc}{}{}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://en.cppreference.com/w/cpp/thread/sleep_for}}
+      \field{title}{std::this\_thread::sleep\_for}
+      \field{year}{2024}
+    \endentry
+    \entry{cppreference_thread}{misc}{}{}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://en.cppreference.com/w/cpp/thread/thread}}
+      \field{title}{std::thread}
+      \field{year}{2024}
     \endentry
   \enddatalist
+  \missing{PFGPlots}
+  \missing{bell2022codefont}
+  \missing{davis2023signalflow}
 \endrefsection
 \endinput
 
