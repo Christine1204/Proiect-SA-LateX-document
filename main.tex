@@ -321,6 +321,7 @@ După ce se trezește, thread-ul tipărește valoarea sa, rezultând un șir sor
     \item Ce se întâmplă când thread-urile se trezesc în același timp, cum ar fi în cazul valorilor duplicate?
     \item Cum am putea măsura complexitatea acestui algoritm? Cum diferă performanța în funcție de sistemul de operare și hardware-ul folosit?
     \item Cum se compară performanța Sleep Sort cu alți algoritmi bazați pe altceva decât comparații, cum ar fi Counting Sort sau Radix Sort, în special pe șiruri cu multe duplicate sau cu o gamă limitată de valori?
+    \item Ce face Sleep Sort cu numere negative sau numere raționale, având în vedere că timpul nu poate fi negativ (la momentul scrierii acestei lucrări) și nu poate fi proporțional cu o valoare rațională fără a introduce probleme de acuratețe?
 \end{itemize}
 
 
@@ -346,7 +347,8 @@ plată, și permite o evaluare mai realistă a performanței sale.
 thread, principalii factori sunt rezoluția cronometrului 
 \cite{microsoft_timers} și modul în care sistemul de operare 
 gestionează scheduling-ul thread-urilor \cite{tanenbaum2014modern}. 
-În general, Sleep Sort poate fi ineficient pe sisteme cu rezoluție 
+În general, Sleep 
+Sort poate fi ineficient pe sisteme cu rezoluție 
 scăzută a timer-ului sau cu scheduling preemptiv agresiv, deoarece 
 thread-urile pot fi trezite mai devreme sau mai târziu decât timpul 
 specificat, afectând ordinea de sortare.
@@ -437,6 +439,10 @@ algoritm clasic de sortare.
 Acest fapt oferă Sleep Sort un avantaj dacă hardware-ul disponibil are resurse abundente,deci,cu destule nuclee și o rezoluție a timer-ului suficient de fină, nu este imposibil ca Sleep Sort să depășească performanța algoritmilor menționați anterior.
 
 
+\subsubsection{Numere negative și numere raționale}
+
+În forma clasică, Sleep Sort nu poate sorta numere negative sau numere raționale, deoarece timpul de \textit{somn} nu poate fi negativ și nu poate fi proporțional cu o valoare rațională fără a introduce o scalare suplimentară care ar complica implementarea și ar afecta performanța.
+Totuși, o implementare modificată ar putea gestiona aceste cazuri prin adăugarea unei constante pentru a face toate valorile pozitive sau prin scalarea valorilor raționale la întregi, deși acest lucru ar introduce overhead suplimentar și ar complica algoritmul, îndepărtându-l de simplitatea sa originală.
 
 \subsection{Ipoteze și așteptări}
 
@@ -481,291 +487,205 @@ sunt evaluate empiric în Secțiunea~\ref{sec:rezultate},unde vom vedea dacă Sl
 
 
 
-\section{Cross-Reference Commands*}
+\section{Rezultate}
 
-    Rho-class provides shorthand commands for cross-referencing figures, tables, code listings, and equations. To customize the label format, edit the \inlinecode{rhobabel.sty} file. Label translations for Spanish are handled automatically.
+    Această secțiune prezintă rezultatele experimentale obținute în urma testării algoritmilor de sortare pe cele cinci distribuții de date descrise în Secțiunea~\ref{sec:distributii}. 
+    Vom analiza performanța fiecărui algoritm în funcție de timpul de execuție, comparându-le cu așteptările teoretice formulate anterior.
+    \par De asemenea, codul sursă folosit pentru testarea algoritmilor și generarea datelor, precum și datele brute,sunt disponibile pe GitHub \ref{sec:GitHub Repository}, pentru a asigura transparența și reproducibilitatea rezultatelor.
 
-        \begin{itemize}
-            \item \inlinecode{\figref{}} — Uses the label style defined by \inlinecode{\figlabel}.
-            \item \inlinecode{\figsref{}} — Uses the label style defined by \inlinecode{\figslabel}.
-            \item \inlinecode{\tabref{}} — Uses the label style defined by \inlinecode{\tablabel}.
-            \item \inlinecode{\coderef{}}  — Uses the label style defined by \inlinecode{\captionlabelcode}.
-            \item \inlinecode{\equref{}} — Uses the label style defined by \inlinecode{\eqlabel}.
-        \end{itemize}
-        
-    These commands generate fully hyperlinked references, both the label and the number, ensuring navigation to the referenced element when clicked in the PDF.
+\subsection{Bubble Sort - Analiză}
 
-\section{Figures}
-		
-    \figref{fig:figure} shows a 3D surface visualization of a bivariate function.
-    		
     \begin{figure}[H]
     	\centering
-    	\includegraphics[width=0.7\columnwidth]{figures/Example.pdf}
-    	\caption{3D surface obtained from PGFPlots \cite{PFGPlots}.}
+    	\includegraphics[width=0.7\columnwidth]{figures/BubbleSort.png}
+    	\caption{Rezultatele testării Bubble Sort.}
     	\label{fig:figure}
     \end{figure}
 
-\section{Tables}
-	
-        \tabref{tab:table} shows an example table of some astronomical objects. 
+    Bubble Sort a performat conform așteptărilor, având un timp de execuție semnificativ mai mare decât ceilalți algoritmi, în special pe șirurile mari.
+    Timpul său de execuție a crescut exponențial pe măsură ce dimensiunea șirului a crescut, confirmând complexitatea sa de $O(n^2)$ în medie și în cel mai defavorabil caz.
+    \par Acest fapt a dus la excluderea acestuia din testele pe șirurile de dimensiuni foarte mari, deoarece timpul de execuție ar fi fost prohibitiv.
 
-        \begin{table}[H]
-        	\caption{Astronomical Object Data}
-        	\label{tab:table}
-        	\begin{tabular}{
-        		>{\raggedright\arraybackslash}p{0.25\columnwidth}
-        		>{\raggedright\arraybackslash}p{0.29\columnwidth}
-        		>{\raggedright\arraybackslash}p{0.31\columnwidth}
-        	}
-        	\toprule
-        	\textbf{Object} & \textbf{Type} & \textbf{Distance (Light Years)} \\
-        	\midrule
-        	Alpha Centauri & Star system & 4.37 \\
-        	Betelgeuse & Red supergiant star & 642.5 \\
-        	Andromeda & Spiral galaxy & 2.537 million \\
-        	Earth & Planet & 0 \\
-        	Sirius & Binary star system & 8.6 \\
-        	\bottomrule
-        	\end{tabular}
-        	\tabletext{Note: The table contains data of some famous celestial objects.}
-        \end{table}
+        	\begin{rhoenv}[frametitle=Performanța asupra distribuțiilor Sortate și Aproape Sortate]
+                După cum putem observa, dacă lista este deja sortată sau aproape sortată, Bubble Sort poate performa mult mai bine, având un timp de execuție liniar în cel mai favorabil caz.
+                Acest fapt se datorează optimizării care verifică dacă s-au făcut interschimbări în timpul unei treceri.
+            \end{rhoenv}
 
-        The \inlinecode{\tabletext{}} command is used to add notes to tables easily. 
 
-\section{Document Data}
+\subsection{Insertion Sort - Analiză}
 
-    \subsection{Front-Matter Footer Block*}
+    \begin{figure}[H]
+    	\centering
+    	\includegraphics[width=0.9\columnwidth]{figures/InsertionSort.png}
+    	\caption{Rezultatele testării Insertion Sort.}
+    	\label{fig:figure}
+    \end{figure}
 
-        A new block called \inlinecode{\docinfo{}}, has been added to the bottom right of the first page, acting as a floating element which stays fixed in place. This replaces the corresponding author block previously located above the abstract in earlier versions.
+    Performanța Insertion Sort a fost în general mai bună decât cea a Bubble Sort, în special pe șirurile mici și aproape sortate, unde a avut un timp de execuție semnificativ mai mic.
+    Acest lucru confirmă complexitatea acestuia și eficiența sa în scenariul datelor aproape sortate.
+    \par Totuși, pe șirurile mari, performanța sa a fost inferioră comparativ cu cea a altor algoritmi mai eficienți, la fel excluzând-ul din testele pe șirurile de dimensiuni mari.
+  
 
-        The \inlinecode{\docinfo{}} block was created to give you greater control over supplementary document data, such as publication dates, licensing information, extended author details, and other front-matter notes. You can fully customize its content to suit your needs.
+\subsection{Merge Sort - Analiză}
 
-        Additionally, the new \inlinecode{\corres{}} command serves as a flexible alternative to \inlinecode{\thanks{}}. Since modifying the standard \inlinecode{\thanks{}} command can be complex and its positioning is often rigid, \inlinecode{\corres{}} was introduced to offer a more adaptable solution without sacrificing functionality. 
-        
-        \begin{note}
-            You can use \verb|\corres{}| as many times as needed since it automatically ensures that each entry remains correctly associated. For best results, I recommend using text symbols rather than mathematical ones (e.g., \verb|\textasteriskcentered|, \verb|\textdagger|, etc.). 
-        \end{note}
+    \begin{figure}[H]
+    	\centering
+    	\includegraphics[width=0.7\columnwidth]{figures/MergeSort.png}
+    	\caption{Rezultatele testării Merge Sort.}
+    	\label{fig:figure}
+    \end{figure}
 
-        If \inlinecode{\corres{}} is not used, \inlinecode{\docinfo{}} will automatically adjust its position. The implementation was designed to handle any combination of front-matter elements you might need when starting your document. In this example template, you’ll find a minimal demonstration that combines both to illustrate their interaction.
+    Merge Sort a avut o performanță consistentă pe toate distribuțiile de date, confirmând complexitatea sa de $O(n \log n)$ în toate cazurile.
+    Timpul său de execuție a crescut semnificativ pe măsură ce dimensiunea șirului a crescut, dar a rămas mult mai eficient decât Bubble Sort și Insertion Sort pe șirurile mari.
+    \par Un efect surprinzător este saltul în timp de execuție pe șirurile de tipul "Plat",unde timpul de sortare sare semnificativ (relativ cu mărimea șirului). Acest lucru se poate datora urmatorilor 2 factori:
 
-    \subsection{Headers and Footers*}
+    \begin{itemize}
+        \item Numărul mare de duplicate din șirurile de tipul "Plat" poate duce la o performanță mai slabă a Merge Sort, deoarece algoritmul nu este optimizat pentru a gestiona eficient elementele duplicate, ceea ce poate duce la un număr crescut de operații de combinare și la o utilizare mai intensă a memoriei.
+        \item Overhead-ul necesar pentru gestionarea memoriei și a operațiilor de combinare în Merge Sort poate deveni mai evident pe șirurile cu multe duplicate, deoarece acestea pot necesita mai multe resurse.
+        \item Deși testele au fost rulate de sute de ori, variabilitatea în performanță nu ar trebui exclusă ca un factor,având în vedere factori ca hit-urile de cache și scheduling-ul thread-urilor în timpul execuției.
+    \end{itemize}
 
-        \subsubsection{Headers}
+    \par
+    Un alt efect așteptat a fost că performanța sa a fost mai slabă pe șirurile mici, unde overhead-ul algoritmului poate domina timpul de execuție, comparativ cu algoritmi ca Insertion Sort care sunt mai eficienți în acest context.
+    Bubble sort, de exemplu,este mai rapid cu o magnitudine de 10-100 ori pe șirurile de dimensiuni mici.
 
-            On all pages except the first, the document title and journal appear in the header. Since twoside layout is enabled, its position alternates depending on whether the page is odd or even.
+    Deși a fost mai lent decât std::sort, performanța sa a fost rezonabilă, având în vedere că este o implementare clasică fără optimizări specifice.Iar performanța foarte stabilă pe toate distribuțiile și dimensiunile șirurilor confirmă robustețea sa în fața diferitelor tipuri de date,sortând 2 milioane valori fără .
 
-        \subsubsection{Footers}
 
-            In the first page, six elements display supplementary information for your document:
+    \par Personal, i-aș acorda nota 9 din 10.
 
-            \begin{itemize}
-                \item \inlinecode{\journalname{}} — Displays the journal name, university, institute, company, or any institutional affiliation.
-                \item \inlinecode{\theday{}} — Displays the current date.
-                \item \inlinecode{\vol{}} — Specifies the volume number of the publication.
-                \item \inlinecode{\no{}} — Specifies the issue number within the volume.
-                \item \inlinecode{\journal{}} — Defines the full journal title.
-                \item \inlinecode{\thepage} — Shows the current page number and the total count.
-            \end{itemize}
 
-             In all cases, you can freely rearrange or customize the order of these elements by modifying the class file to suit your needs. If any of them are not required, simply omit the corresponding command — the remaining elements will automatically adjust their spacing to remain evenly distributed.
+\subsection{Quick Sort - Analiză}
 
-\section{Rho Custom Packages}
+    \begin{figure}[H]
+    	\centering
+    	\includegraphics[width=0.7\columnwidth]{figures/QuickSort.png}
+    	\caption{Rezultatele testării Quick Sort.}
+    	\label{fig:figure}
+    \end{figure}
 
-    \subsection{Rhobabel.sty}
-		
-		This package have all the commands that automatically translate from English to Spanish when this custom package is defined. 
-		
-		By default, this document has its content in English. However, at the beginning of the document you will find a recommendation when writing in Spanish. 
-		
-		You may modify this package if you want to use other language than English or Spanish. This will make easier to translate your document without having to modify the class document.
+    Quick Sort a avut o performanță excelentă pe majoritatea distribuțiilor de date, confirmând complexitatea sa de $O(n \log n)$ în medie și în cel mai bun caz.
+    Timpul său de execuție a crescut semnificativ pe șirurile sortate și aproape sortate, confirmând degradarea la $O(n^2)$ în aceste cazuri, ceea ce a dus la excluderea acestuia din testele pe șirurile de dimensiuni mari pentru aceste distribuții.
+    Pe lângă degradarea performanței,alegerea neoptimă a pivotului a dus la un număr crescut de operații de partiționare și la o utilizare mai intensă a memoriei, ceea ce a făcut ca Quick Sort să dea erori de "Stack Overflow" pe șirurile sortate și aproape sortate de dimensiuni mari, din cauza adâncimii excesive a recursiei.
+    \par Pe șirurile aleatoare și cu multe duplicate, performanța sa a fost foarte bună, dar a fost depășită de std::sort, care este optimizat pentru astfel de scenarii.
+    Comparativ cu Merge Sort, Quick Sort a avut nevoie de mai puțin overhead,astfel performând mult mai bine pe șirurile mici,dar mai slab față de algoritmele non-recursive.
 
-    \subsection{Rhoenvs.sty}
 
-        This package provides custom environments designed to enhance the visual presentation and structure of your document. Key examples include rhoenv, info, and note.
-        
-		Their style is defined by \inlinecode{rhoenvstyle} — allowing you to customize their appearance according to your document’s requirements.
+\subsection{std::sort - Analiză}
 
-		An example using the \inlinecode{rhoenv} environment is shown below.
-		
-		\begin{rhoenv}[frametitle=Custom Title]
-			This is an example of the custom title environment. To add a title type this command \verb|[frametitle=Custom Title]| next to the beginning of this environment (as shown in this example).
+    \begin{figure}[H]
+    	\centering
+    	\includegraphics[width=0.7\columnwidth]{figures/StdSort.png}
+    	\caption{Rezultatele testării std::sort.}
+    	\label{fig:figure}
+    \end{figure}
+
+    std::sort a avut o performanță excelentă pe toate distribuțiile de date, confirmând complexitatea sa de $O(n \log n)$ în toate cazurile,superioritatea acestuia pe date mici față de Merge Sort și Quick Sort fiind evidentă.
+    \par Un efect surprinzător este că performanța sa a fost foarte bună pe șirurile de tipul "Plat", unde a depășit semnificativ Merge Sort, confirmând optimizarea sa pentru gestionarea eficientă a elementelor duplicate.
+    De asemenea, performanța sa a fost excelentă pe șirurile sortate și aproape sortate, unde nu s-a degradat la $O(n^2)$ ca Quick Sort, datorită optimizării sale pentru astfel de scenarii.
+
+    \par Putem concluziona că std::sort a fost cel mai performant algoritm în majoritatea scenariilor de până acum, confirmându-și reputația de soluție optimizată și bine testată pentru sortarea generală în C++.
+
+
+\subsection{Sleep Sort - Analiză}
+    
+    Având în vedere natura sa neconvențională, nu putem măsura performanța Sleep Sort folosind dimensiunea array-ului de intrare,deoarece timpul de execuție depinde în mod direct de valorile elementelor, nu de numărul lor.
+    \par Timpul de citire e practic neglijabil comparativ cu timpul de așteptare, deci nu are sens să-l măsurăm în funcție de $n$,acesta fiind relevant doar pentru compararea cu algoritmii clasici.
+
+
+    \begin{figure}[H]
+    	\centering
+    	\includegraphics[width=0.7\columnwidth]{figures/SleepSort.png}
+    	\caption{Rezultatele testării Sleep Sort.}
+    	\label{fig:figure}
+    \end{figure}
+    
+        \par Putem observa că timpul de sortare, în conformitate cu așteptările, a crescut semnificativ pe măsură ce valorile elementelor au crescut, confirmând dependența sa de valorile din șir,totuși viteza nu e impractică, considerând independența sa față de $n$.
+    \par Pentru a aduce această "super putere" a Sleep Sort la extrem, am testat Sleep sort pe un șir de 2 milioane elemente,toate având valoarea între 1 și 2, rezultatele sunt următoarele:
+
+    \begin{table}[h]
+\centering
+\caption{Timpi de execuție pentru $n = 2{,}000{,}000$ (valori între 2, medie a 2 rulări)}
+\begin{tabular}{lccc}
+\toprule
+\textbf{Tip date} & \textbf{Merge Sort (s)} & \textbf{std::sort (s)} & \textbf{Sleep Sort (s)} \\
+\midrule
+Random        & 1.0363 & 0.6456 & \textbf{0.4576} \\
+Flat          & 0.9614 & 0.6247 & \textbf{0.4794} \\
+Nearly Sorted & 0.8577 & 0.5909 & \textbf{0.4436} \\
+Reverse Sorted& 0.8902 & 0.6001 & \textbf{0.4492} \\
+Sorted        & 0.8755 & 0.6050 & \textbf{0.4451} \\
+\bottomrule
+\end{tabular}
+\label{tab:sleep_sort_wins}
+\end{table}
+
+    \par După cum putem observa,Sleep Sort s-a trezit la înălțimea așteptărilor, depășind atât Merge Sort, cât și std::sort pe toate cele cinci distribuții de date, fiind de 2 ori mai rapid decât Merge Sort și de aproximativ 1.4 ori mai rapid decât std::sort, confirmând avantajul său semnificativ în aceste condiții,
+        dovedind că secretul performanței e, la urma urmei, un somn bun.
+
+
+
+\section{Comparație cu literatura actuală}
+
+    Bubble Sort și Insertion Sort au confirmat complexitatea $O(n^2)$ documentată de Knuth \cite{knuth1998sorting}, fără surprize.
+
+
+  \par *Merge Sort a confirmat complexitatea $O(n \log n)$
+ $O(n\log n)$ în toate cazurile, dar a avut o performanță mai slabă decât Quick Sort și pe șirurile de tipul "Plat" de mărime mică, ceea ce poate fi atribuit mai multor factori discutați în subsecțiunea de analiză a acestuia.
+
+\par Quick Sort a degradat exact unde teoria prezice,pe date sortate și reverse-sortate,confirmând analiza clasică \cite{hoare1961quicksort},și a eșuat pe șirurile mari din aceste distribuții din cauza alegerii ineficientă a pivotului, așa cum era de așteptat.
+
+\par   std::sort a performat conform descrierii Introsort din Musser \cite{musser1997introsort}, inclusiv comportamentul superior pe șiruri aproape sortate față de Quick Sort pur,cât și pe șiruri mici,fără necesitatea a unui overhead de recursivitate.
+    
+\par    Sleep Sort nu are literatură de specialitate în sensul academic al termenului,având doar implementări și articole informale \cite{princeton_sleepsort, henney2023sleepsort}. 
+\par Nu există lucrări peer-reviewed care să analizeze comportamentul său pe date reale, complexitatea sa practică sau comparații cu algoritmi non-comparativi.
+    Prin urmare, această secțiune nu poate compara rezultatele cu un corp de cunoștințe existent, pentru că acel corp nu există.
+
+\par Contribuția principală a acestei lucrări este tocmai umplerea acestui gol în literatură, oferind nu doar o analiză detailată a performanței Sleep Sort pe date reale, ci și o optimizare semnificativă a implementării sale pentru a gestiona eficient valorile duplicate, ceea ce nu a fost abordat în niciuna dintre sursele informale existente.
+\par   \textbf{Chiar și dacă Sleep Sort este inferior în general față de Counting Sort și Radix Sort, performanța sa în scenarii specifice, cum ar fi șirurile cu o gamă limitată de valori sau cu multe duplicate, oferă o perspectivă interesantă despre cum putem exploata paralelismul hardware pentru a obține performanțe competitive în sortare, chiar și cu o abordare neconvențională.}
+
+
+
+		\begin{rhoenv}[frametitle=Direcții viitoare de cercetare]
+Ca o direcție potențială de explorare a acestui algoritm, ar fi interesant să investigăm dacă ar fi eficientă folosirea sleep sort-ului cu un timp  de somn foarte scurt, cum ar fi 30ms sau mai puțin,pentru obținerea unui șir aproape sortat, care să fie apoi finalizat cu un algoritm clasic de sortare, cum ar fi Insertion Sort, care este foarte eficient pe șiruri aproape sortate. 
+Această combinație ar putea oferi o performanță excelentă pe șiruri cu o gamă limitată de valori sau cu multe duplicate, exploatând avantajele ambilor algoritmi.
+\par Totodată,găsirea unei limite inferioare pentru timpul de somn, sub care Sleep Sort devine ineficient, ar fi o direcție interesantă de cercetare, deoarece ar putea oferi o perspectivă asupra rezoluției timer-ului necesare pentru a obține performanțe competitive cu această abordare.
 		\end{rhoenv}
 
-        The \inlinecode{info} and \inlinecode{note} are environments which have a predefined title and translate their title to Spanish automatically when this language is defined.
 
-\section{Equations}
+\section{Concluzie}
 
-	\equref{eq:equation} shows the Schrödinger equation as an example. 
+Această lucrare a analizat experimental șase algoritmi de sortare 
+pe cinci distribuții de date, cu dimensiuni între $10$ și $2.000.000$ 
+de elemente. Rezultatele au confirmat, în mare măsură, așteptările 
+teoretice: Bubble Sort și Insertion Sort sunt ineficienți pe date 
+mari, Quick Sort se degradează previzibil pe date sortate, iar 
+std::sort rămâne soluția generalistă optimă pentru majoritatea 
+scenariilor practice în C++.
 
-    \begin{equation}\label{eq:equation}
-        i\hbar \frac{\partial }{\partial t}\Psi(\mathbf{r},t) = \left[\frac{-\hbar^2}{2m}\nabla^2 + V(\mathbf{r},t) \right]\Psi(\mathbf{r},t)
-    \end{equation}
-	
-	The \inlinecode{amssymb} and \inlinecode{amsmath} packages were not required, as \href{https://ctan.org/pkg/stix2-otf/}{STIX2} font incorporates mathematical symbols for writing quality equations.
-	
-	\begin{note}
-		If you would like to change the values that adjust the spacing above and below the equations, change the \verb|\eqskip| value until the preferred spacing is set. The default value is set to 9pt.
-	\end{note}
+\par Totuși, concluzia principală a acestei lucrări nu este despre 
+algoritmii pe care îi știm deja. Este despre cel pe care nu îl luam 
+în serios.
 
-\section{Codes}
+Am depășit dificultățile asociate cu implementarea unui algoritm neconvențional,bazat pe multi-threading,pentru a demonstra că acesta este nu doar o curiozitate, ci o soluție viabilă în anumite condiții.
+Sleep Sort a surprins prin performanța sa pe șirurile cu o gamă limitată de valori și cu multe duplicate,
+depășind atât Merge Sort, cât și std::sort în aceste scenarii, confirmând că uneori, chiar și în lumea algoritmilor de sortare, un somn bun poate fi cheia succesului.
 
-	\subsection{Coding with Minted*}
-	
-		The \inlinecode{minted} package offers customized features for adding codes. In addition, the template is designed to work seamlessly with Fira Code, a monospaced font specially crafted for programming environments.
-
-        If your are using a desktop app as \href{https://www.texstudio.org/}{TeXstudio}, try these steps to make this package work on Windows:
-		
-		\begin{enumerate}
-			\item Install Python — A stable version (e.g., v.3.11)
-			\item Open the terminal and type \inlinecode{pip install Pygments}.
-			\item Update if a newer version is available.
-			\item Go to TeXStudio settings and change the default compiler to \inlinecode{pdflatex --shell-escape -interaction=nonstopmode \%.tex}.
-			\item Compile and wait for the result.
-		\end{enumerate}
-        
-		\vspace*{-9pt}
-        
-		\begin{rhoenv}[frametitle=Caution]
-			Ensure that \textbf{pygments} is properly installed and added to your system’s PATH. Otherwise, you may encounter compilation errors. Additionally, enable shell escape when compiling, as it is required for minted to process and highlight code.
-		\end{rhoenv}
-		
-		In \href{https://es.overleaf.com/}{Overleaf}, this package is easier to use since it does not require any additional installations or modifications — just add the code as shown in the example. \coderef{lst:example} shows a Python example.
-		
-		\begin{code}
-			\inputminted{python}{example.py}
-            \caption{Python code example with minted.}
-			\label{lst:example}
-		\end{code}
-		
-		You can customize its design changing \inlinecode{\usemintedstyle} command. The different styles offered by the \href{https://ctan.org/pkg/minted}{minted package} can be preview through this link — \url{https://pygments.org/styles/}.
-
-    \subsection{Coding with Listings}
-	
-		Since \inlinecode{minted} requires additional installations and can be complex in some desktop \TeX\ editors, you can use the \inlinecode{listings} package instead, which provides a simpler way to include code.
-		
-		\begin{code}
-			\lstinputlisting[language=python]{example.py}
-			\label{lst:example2}
-            \caption{Python code example with listings.}
-		\end{code}
-		
-		While \inlinecode{listings} is a simpler and widely supported package for code formatting, \inlinecode{minted} offers a more modern and powerful approach. It leverages the Pygments syntax highlighter to deliver superior coloring, language support, and styling options. One of its key advantages is the ability to easily switch between built-in color styles.
-		
-		In contrast, \inlinecode{listings} requires manual setup for colors, fonts, and formatting rules.
-		For users who prefer fine-tuned customization, the styling options for \inlinecode{listings} are organized in \inlinecode{rho.cls} file and can be modified at any time to suit individual preferences.
-
-	\subsection{Inline Code*}
-	
-		As shown in this template, inline code has a custom style for improved visual appeal. To use it, simply add \inlinecode{\inlinecode{}} command and place your code inside the braces.
-
-\section*{Numberless section}
-\addcontentsline{toc}{section}{Numberless section}
-
-    Declaring a numberless section automatically inserts a square symbol before the title. This unique feature is specific to first-level sections within this class.
-    
-    As this symbol also affects the table of contents and references titles, users who prefer to disable it may edit the section styling parameters in \inlinecode{rho.cls}.
-
-\section{Bibliography}
-		
-	Bibliography management is handled by \inlinecode{biblatex}, with the default citation and reference style set to IEEE. The \inlinecode{citestyle=numeric-comp} option is enabled, allowing multiple citations to be grouped within a single bracket (e.g., \cite{davis2023signalflow,bell2022codefont}). The citation format can be customized directly in \inlinecode{rho.cls} to suit any preferred style.
-
-\section*{FAQ}
-\addcontentsline{toc}{section}{FAQ}
-
-    \subsection*{How do I manage my references?}
-    \addcontentsline{toc}{subsection}{How do I manage my references?}
-        
-        To manage your references, I recommend using the tool \href{https://www.scribbr.es/citar/generador/folders/73QOXYsCwMRu4ifQaN65mx/lists/msTfx7GJjIAOUkufbISnA/}{scribbr}. You can simply enter the URL or create your own citation, and then export it to \LaTeX{} using the options in the three-dot menu.
-            
-        The generated citation can be copied and pasted into \inlinecode{rho.bib}, the file designated for bibliography management. You may rename this file, but if you do, remember to update the \inlinecode{\addbibresource} command in \inlinecode{rho.cls} under the biblatex section.
-    
-        \begin{note}
-            Some platforms, such as Google Scholar or scientific journals, provide citations directly in BibTeX format. Therefore, check if there is a ``how to cite this document'' section to streamline the citation process even further.
-        \end{note}
-
-        If you have any further questions, you can refer to the following page — \href{https://es.overleaf.com/learn/latex/Bibliography_management_with_biblatex}{Bibliography management with biblatex}.
-        
-    \subsection*{What should I do with the example files?}
-    \addcontentsline{toc}{subsection}{What should I do with the example files?}
-
-        The template includes sample content — such as an example figure, bibliography entries, and the \inlinecode{example.py} script — to demonstrate how the layout and features work. Once you start customizing the document for your own use, feel free to delete all example files and entries you don’t need.
-
-    \subsection*{How do I place equations easily?}
-    \addcontentsline{toc}{subsection}{How do I place equations easily?}
-
-        For equations, we have two options: inline or on its own line. For inline equations, simply place a dollar sign (\$) at the beginning and end of the equation. However, if you want the equation to be displayed on its own line, you need to use the equation environment.
-        
-        If you find it challenging to write formulas directly in \LaTeX, you can use text editors like Word. In the equations menu, you can select \LaTeX\ in the conversion section and copy and paste the equation you wrote into one of these two environments.
-
-    \subsection*{How do I change the paper size?}
-    \addcontentsline{toc}{subsection}{How do I change the paper size?}
-
-        By default, this class was adapted for a4paper and test it with letterpaper. The following paper sizes are available in \LaTeX:
-
-        \begin{itemize}
-            \item letterpaper (11 $\times$ 8.5 in)
-            \item legalpaper (14 $\times$ 8.5 in)
-            \item executivepaper (10.5 $\times$ 7.25 in)
-            \item a4paper (21 $\times$ 29.7 cm)
-            \item a5paper (21 $\times$ 14.8 cm)
-            \item b5paper (25 $\times$ 17.6 cm)
-       \end{itemize}
-
-\section*{Contact me}
-\addcontentsline{toc}{section}{Contact me}
-    
-    Have questions, suggestions, or an idea for a new feature? Found a bug or working on a project you’d like to invite me to?  
-    
-    Feel free to reach out — I’d be happy to help, collaborate, or fix the issue.  Your feedback helps me improve my templates!
-
-    \AtBeginEnvironment{tabular}{\normalsize\sffamily\selectfont}
-    \begin{center}
-        \setlength{\tabcolsep}{3pt}
-        \begin{tabular}{cl}
-            \faEnvelope & \href{mailto:memo.notess1@gmail.com}{memo.notess1@gmail.com} \\
-            \faGlobe{} & \href{https://memonotess1.wixsite.com/memonotess}{memonotess.com} \\
-            \faInstagram{} & \href{https://www.instagram.com/memo.notess/}{@memo.notess}
-        \end{tabular}
-    \end{center}
+\par Am adus o contribuție în litearura de specialitate și o implementare optimizată a unui algoritm de sortare,ceea ce poate fi rezumat printr-o singură propoziție: "Somnul este esențial pentru performanță, chiar și în sortare."
 
 \section*{Github Repository}
 \addcontentsline{toc}{section}{Github Repository}
 
-    Visit the repository to access the source code, track ongoing development, report issues, and stay up to date with the latest changes.
+    Pe acest Repository Github este disponibil codul sursă a tuturor algoritmilor, precum și scripturile de testare,fișierul Excel și datele brute folosite pentru a genera rezultatele din această lucrare.
 
-    \begin{center}
-        \setlength{\tabcolsep}{3pt}
-        \begin{tabular}{cl}
-             \faGithub &  \url{https://github.com/MemoJimenez/Rho-class}\\
-        \end{tabular}
-    \end{center}
+\begin{center}
+    \setlength{\tabcolsep}{1pt}
+    \begin{tabular}{cl}
+         \faGithub & \href{https://github.com/Christine1204/Proiect-SA-comparare-algoritmi}{%
+             \parbox[t]{6cm}{github.com/Christine1204/\\Proiect-SA-comparare-algoritmi}} \\
+    \end{tabular}
+\end{center}
 
-\section*{Supporting}
-\addcontentsline{toc}{section}{Supporting}
-
-    Enjoyed this document class? Check out tau-class, my very first \LaTeX{} template.
-
-    \begin{center}
-        \setlength{\tabcolsep}{3pt}
-        \begin{tabular}{cl}
-             \faLink &  \href{https://es.overleaf.com/latex/templates/tau-class-lab-report-template/chhshmhxstsq}{https://es.overleaf.com/latex/templates/tau-class}\\
-        \end{tabular}
-    \end{center}
-    
-    \subsection*{Any contributions are welcome!}
-    \addcontentsline{toc}{subsection}{Any contributions are welcome!}
-    
-        Coffee keeps me awake and helps me create better \LaTeX\ templates. If you wish to support my work, you can do so through PayPal: 
-
-        \begin{center}
-            \setlength{\tabcolsep}{3pt}
-            \begin{tabular}{cl}
-                 \faPaypal & \textbf{\url{https://www.paypal.me/GuillermoJimeenez}}\\
-            \end{tabular}
-            \vskip9pt
-            Enjoy writing with rho-class!
-        \end{center}
 
 %----------------------------------------------------------
 

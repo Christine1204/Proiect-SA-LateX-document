@@ -20,32 +20,16 @@
 \contentsline {subsubsection}{\numberline {3.6.2}Problema elementelor duplicate}{5}{subsubsection.3.6.2}%
 \contentsline {subsubsection}{\numberline {3.6.3}Complexitatea algoritmului și influența sistemului de operare și hardware-ului}{5}{subsubsection.3.6.3}%
 \contentsline {subsubsection}{\numberline {3.6.4}Comparația cu Counting și Radix Sort}{5}{subsubsection.3.6.4}%
+\contentsline {subsubsection}{\numberline {3.6.5}Numere negative și numere raționale}{5}{subsubsection.3.6.5}%
 \contentsline {subsection}{\numberline {3.7}Ipoteze și așteptări}{5}{subsection.3.7}%
-\contentsline {section}{\numberline {4}Cross-Reference Commands*}{5}{section.4}%
-\contentsline {section}{\numberline {5}Figures}{5}{section.5}%
-\contentsline {section}{\numberline {6}Tables}{6}{section.6}%
-\contentsline {section}{\numberline {7}Document Data}{6}{section.7}%
-\contentsline {subsection}{\numberline {7.1}Front-Matter Footer Block*}{6}{subsection.7.1}%
-\contentsline {subsection}{\numberline {7.2}Headers and Footers*}{6}{subsection.7.2}%
-\contentsline {subsubsection}{\numberline {7.2.1}Headers}{6}{subsubsection.7.2.1}%
-\contentsline {subsubsection}{\numberline {7.2.2}Footers}{6}{subsubsection.7.2.2}%
-\contentsline {section}{\numberline {8}Rho Custom Packages}{6}{section.8}%
-\contentsline {subsection}{\numberline {8.1}Rhobabel.sty}{6}{subsection.8.1}%
-\contentsline {subsection}{\numberline {8.2}Rhoenvs.sty}{6}{subsection.8.2}%
-\contentsline {section}{\numberline {9}Equations}{6}{section.9}%
-\contentsline {section}{\numberline {10}Codes}{7}{section.10}%
-\contentsline {subsection}{\numberline {10.1}Coding with Minted*}{7}{subsection.10.1}%
-\contentsline {subsection}{\numberline {10.2}Coding with Listings}{7}{subsection.10.2}%
-\contentsline {subsection}{\numberline {10.3}Inline Code*}{7}{subsection.10.3}%
-\contentsline {section}{Numberless section}{7}{subsection.10.3}%
-\contentsline {section}{\numberline {11}Bibliography}{7}{section.11}%
-\contentsline {section}{FAQ}{7}{section.11}%
-\contentsline {subsection}{How do I manage my references?}{7}{section.11}%
-\contentsline {subsection}{What should I do with the example files?}{8}{section.11}%
-\contentsline {subsection}{How do I place equations easily?}{8}{section.11}%
-\contentsline {subsection}{How do I change the paper size?}{8}{section.11}%
-\contentsline {section}{Contact me}{8}{section.11}%
-\contentsline {section}{Github Repository}{8}{section.11}%
-\contentsline {section}{Supporting}{8}{section.11}%
-\contentsline {subsection}{Any contributions are welcome!}{8}{section.11}%
+\contentsline {section}{\numberline {4}Rezultate}{5}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Bubble Sort - Analiză}{6}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Insertion Sort - Analiză}{6}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Merge Sort - Analiză}{6}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Quick Sort - Analiză}{7}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}std::sort - Analiză}{7}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Sleep Sort - Analiză}{7}{subsection.4.6}%
+\contentsline {section}{\numberline {5}Comparație cu literatura actuală}{7}{section.5}%
+\contentsline {section}{\numberline {6}Concluzie}{8}{section.6}%
+\contentsline {section}{Github Repository}{8}{section.6}%
 \contentsfinish 

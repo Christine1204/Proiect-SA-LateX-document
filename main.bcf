@@ -2422,10 +2422,11 @@
     <bcf:citekey order="39" intorder="1">knuth1998sorting</bcf:citekey>
     <bcf:citekey order="40" intorder="1">knuth1998sorting</bcf:citekey>
     <bcf:citekey order="41" intorder="1">tanenbaum2014modern</bcf:citekey>
-    <bcf:citekey order="42" intorder="1">PFGPlots</bcf:citekey>
-    <bcf:citekey order="43" intorder="1">PFGPlots</bcf:citekey>
-    <bcf:citekey order="44" intorder="1">davis2023signalflow</bcf:citekey>
-    <bcf:citekey order="44" intorder="2">bell2022codefont</bcf:citekey>
+    <bcf:citekey order="42" intorder="1">knuth1998sorting</bcf:citekey>
+    <bcf:citekey order="43" intorder="1">hoare1961quicksort</bcf:citekey>
+    <bcf:citekey order="44" intorder="1">musser1997introsort</bcf:citekey>
+    <bcf:citekey order="45" intorder="1">princeton_sleepsort</bcf:citekey>
+    <bcf:citekey order="45" intorder="2">henney2023sleepsort</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="ynt">
