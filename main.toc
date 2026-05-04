@@ -14,7 +14,7 @@
 \contentsline {subsection}{\numberline {3.2}Insertion Sort}{2}{subsection.3.2}%
 \contentsline {subsection}{\numberline {3.3}Merge Sort}{3}{subsection.3.3}%
 \contentsline {subsection}{\numberline {3.4}Quick Sort}{3}{subsection.3.4}%
-\contentsline {subsection}{\numberline {3.5}std::sort}{3}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.5}std::sort}{4}{subsection.3.5}%
 \contentsline {subsection}{\numberline {3.6}Sleep Sort}{4}{subsection.3.6}%
 \contentsline {subsubsection}{\numberline {3.6.1}Determinarea timpului de \textit {somn}}{4}{subsubsection.3.6.1}%
 \contentsline {subsubsection}{\numberline {3.6.2}Problema elementelor duplicate}{5}{subsubsection.3.6.2}%
@@ -29,7 +29,7 @@
 \contentsline {subsection}{\numberline {4.4}Quick Sort - Analiză}{7}{subsection.4.4}%
 \contentsline {subsection}{\numberline {4.5}std::sort - Analiză}{7}{subsection.4.5}%
 \contentsline {subsection}{\numberline {4.6}Sleep Sort - Analiză}{7}{subsection.4.6}%
-\contentsline {section}{\numberline {5}Comparație cu literatura actuală}{7}{section.5}%
+\contentsline {section}{\numberline {5}Comparație cu literatura actuală}{8}{section.5}%
 \contentsline {section}{\numberline {6}Concluzie}{8}{section.6}%
 \contentsline {section}{Github Repository}{8}{section.6}%
 \contentsfinish 

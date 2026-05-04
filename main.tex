@@ -115,8 +115,7 @@ competitiv în condiții specifice.
 
 
 Lucrarea este organizată astfel: Secțiunea~\ref{sec:algoritmi} descrie 
-algoritmii, Secțiunea~\ref{sec:metodologie} prezintă configurația 
-experimentală, Secțiunea~\ref{sec:rezultate} analizează rezultatele, 
+algoritmii, Secțiunea~\ref{sec:ipoteze} prezintă ipotezele teoretice verificate, Secțiunea~\ref{sec:rezultate} analizează rezultatele, 
 iar Secțiunea~\ref{sec:concluzii} sintetizează concluziile.
 
 
@@ -125,6 +124,8 @@ Implementarea Sleep Sort propusă este propria mea contribuție: am observat
 că varianta clasică creează câte un thread per element, ineficient pe date 
 cu duplicate, și am rezolvat asta grupând elementele identice printr-un 
 \inlinecode{std::map} pe același fir de execuție.
+
+Restul algoritmilor nu sunt creați de mine, fiind implementări standard disponibile în literatură și online,disponibile în referințele bibliografice.
 
 \section{Date de Intrare}
 
@@ -447,7 +448,7 @@ Acest fapt oferă algoritmului Sleep Sort un avantaj dacă hardware-ul disponibi
 Totuși, o implementare modificată ar putea gestiona aceste cazuri prin adăugarea unei constante pentru a face toate valorile pozitive sau prin scalarea valorilor raționale la întregi, deși acest lucru ar introduce overhead suplimentar și ar complica algoritmul, îndepărtându-l de simplitatea sa originală.
 
 \subsection{Ipoteze și așteptări}
-
+    \label{sec:ipoteze}
 \tabref{tab:complexitati} prezintă o sinteză a complexităților 
 teoretice și proprietăților algoritmilor analizați în această lucrare până acum.
 
