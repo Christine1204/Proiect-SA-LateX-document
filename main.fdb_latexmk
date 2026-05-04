@@ -1,12 +1,12 @@
 # Fdb version 4
-["biber main"] 1777913267.30739 "main.bcf" "main.bbl" "main" 1777917645.36128 0
-  "main.bcf" 1777917643 112371 eb1f49c1bceab90c53a621651a5025ab "pdflatex"
+["biber main"] 1777913267.30739 "main.bcf" "main.bbl" "main" 1777918606.9135 0
+  "main.bcf" 1777918606 112371 eb1f49c1bceab90c53a621651a5025ab "pdflatex"
   "rho.bib" 1777726497 4777 c824977800cfec071fbd9b904e26e19a ""
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1777917628.61984 "c:/Users/Christine/OneDrive - e-uvt.ro/Desktop/Proiect SA LateX document/main.tex" "main.pdf" "main" 1777917645.36346 0
+["pdflatex"] 1777918596.63602 "c:/Users/Christine/OneDrive - e-uvt.ro/Desktop/Proiect SA LateX document/main.tex" "main.pdf" "main" 1777918606.91483 0
   "_minted/08A2088589D288CD7C2B3C7A1202AB91.highlight.minted" 1777585493 5664 c7b7747460265c9c4b8fc1a0cc3dc27d ""
   "_minted/6153F391D869F5EBC84CF2131A323C59.highlight.minted" 1777719702 1724 3e3115a9a4f2aadb09d4e800e790362c ""
   "_minted/9BB5307103E75004B4A1EB94BC451387.highlight.minted" 1777586916 3359 ce729286663c8d43753e95da2394d763 ""
@@ -15,7 +15,7 @@
   "_minted/D50460CD1B0506A6CF57501EBE74A33F.highlight.minted" 1777725323 3764 87690297c7c3538613851a9113c41a7d ""
   "_minted/_FAD58DE7366495DB4650CFEFAC2FCD61.index.minted" 1777891463 562 b659660cced4485f1a58f69205227ecc ""
   "_minted/friendly.style.minted" 1777547172 6611 10ee1c54a45212a1fd1d9825a4cd8b6a ""
-  "c:/Users/Christine/OneDrive - e-uvt.ro/Desktop/Proiect SA LateX document/main.tex" 1777917609 45502 74427651c14b7787d6befb8c361dbe46 ""
+  "c:/Users/Christine/OneDrive - e-uvt.ro/Desktop/Proiect SA LateX document/main.tex" 1777918585 45835 2342584477664f38ec89d951263cde7b ""
   "c:/texlive/2026/texmf-dist/fonts/enc/dvips/fira/fir_d4q673.enc" 1774548512 2978 6d777d1174162fa94ff58f36782f4570 ""
   "c:/texlive/2026/texmf-dist/fonts/enc/dvips/fira/fir_d67aat.enc" 1774548512 3385 21a7e8c8dac3c39de5acda2c56e7bd7e ""
   "c:/texlive/2026/texmf-dist/fonts/enc/dvips/fira/fir_iln36p.enc" 1774548512 3071 cfa92ee28d698dd9275559d9d1c3a233 ""
@@ -361,11 +361,11 @@
   "figures/QuickSort.png" 1776939395 29385 937479f207a352b50dd7729bcdec1db3 ""
   "figures/SleepSort.png" 1776939519 18254 e5f34fbc8012908378bfc673bdbebe92 ""
   "figures/stdsort.png" 1776939470 27988 66aaeb26be8dabd6cc5a96d71c18fc61 ""
-  "main.aux" 1777917643 25459 134257701c8aec9f0f65701e4ae16e0a "pdflatex"
+  "main.aux" 1777918606 26026 be5de46647ee21257b99970baf0b9f1d "pdflatex"
   "main.bbl" 1777913282 22313 4245c035e188b3f282d9a177e442e641 "biber main"
-  "main.run.xml" 1777917643 2367 2e318f80a120c1aafa417bafd8a14358 "pdflatex"
-  "main.tex" 1777917609 45502 74427651c14b7787d6befb8c361dbe46 ""
-  "main.toc" 1777917643 2917 3ade772a84b057d21abdb15821aa44da "pdflatex"
+  "main.run.xml" 1777918606 2367 2e318f80a120c1aafa417bafd8a14358 "pdflatex"
+  "main.tex" 1777918585 45835 2342584477664f38ec89d951263cde7b ""
+  "main.toc" 1777918606 2917 3ade772a84b057d21abdb15821aa44da "pdflatex"
   "rho-class/rho.cls" 1776849520 17763 26c0f83bcf4a9b6345bef8f9a1dcd71a ""
   "rho-class/rhobabel.sty" 1776849520 3824 058f7913dfd25dec044ef79d638dd649 ""
   "rho-class/rhoenvs.sty" 1776849520 2971 6453957dec95b12ee09023bcd913f644 ""

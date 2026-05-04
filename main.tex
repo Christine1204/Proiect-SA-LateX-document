@@ -77,12 +77,12 @@
 %----------------------------------------------------------
 
 \begin{abstract}
-    Această lucrare prezintă o analiză experimentală a performanței algoritmilor de sortare, comparând soluții clasice precum Bubble Sort, Insertion Sort, Quick Sort,Merge Sort și implementarea de referință din biblioteca standard C++, std::sort.
+    Această lucrare prezintă o analiză experimentală a performanței algoritmilor de sortare, comparând soluții clasice precum Bubble Sort, Insertion Sort, Quick Sort, Merge Sort și implementarea de referință din biblioteca standard C++, std::sort.
     Un element central și neconvențional al studiului este includerea algoritmului Sleep Sort, testat pentru a identifica limitele practice ale eficienței bazate pe multi-threading. 
     \\\\Metodologia a presupus implementarea în C++ folosind compilatorul GCC și testarea pe diverse seturi de date, cu dimensiuni cuprinse între $10$ și $2.000.000$ de elemente și cinci distribuții de valori diferite.
-    Principalul parametru monitorizat a fost timpul de execuție, măsurat în timpul real de pe ceasul de perete folosind librăria standard inclusă chrono, pentru a evalua scalabilitatea și performanța fiecărui algoritm.
+    Principalul parametru monitorizat a fost timpul de execuție, măsurat în timpul real de pe ceasul de perete folosind biblioteca standard inclusă chrono, pentru a evalua scalabilitatea și performanța fiecărui algoritm.
     \\\\Rezultatele obținute au evidențiat diferențe semnificative în performanță, cu algoritmi precum Quick Sort și Merge Sort demonstrând o eficiență superioară în comparație cu soluțiile mai simple.
-    Totuși,deși majoritatea rezultatelor au fost pe măsura așteptărilor,bazat pe ce știm despre algoritmii de sortare, Sleep Sort a prezentat un comportament neașteptat, depășind performanța algoritmului std::sort din librăria C++ în anumite condiții.
+    Totuși, deși majoritatea rezultatelor au fost pe măsura așteptărilor, pe baza cunoștințelor despre algoritmii de sortare, Sleep Sort a prezentat un comportament neașteptat, depășind performanța algoritmului std::sort din biblioteca C++ în anumite condiții.
     \\\\Lucrarea demonstrează astfel că eficiența unui algoritm este strâns legată de natura distribuției datelor și de dimensiunea acestora, evidențiind importanța alegerii algoritmului potrivit pentru fiecare situație specifică.
 \end{abstract}
 
@@ -132,9 +132,10 @@ cu duplicate, și am rezolvat asta grupând elementele identice printr-un
     Această secțiune oferă o prezentare generală a datelor folosite în această lucrare, evidențiind principiile de funcționare și complexitatea lor teoretică.
     Algoritmii de sortare (mai puțin Sleep Sort) pot sorta orice tip de date, atâta timp cât există o relație de ordine definită între ele.
     
-    Pe parcursul acestei lucrări,toate datele de intrare sunt de tip integer.
+    Pe parcursul acestei lucrări, toate datele de intrare sunt de tip integer.
 
     \subsection{Tipuri de date}
+    \label{sec:distributii}
 
 
     Fie $n \in \mathbb{N}$ dimensiunea șirului și $A = (a_1, a_2, \dots, a_n)$ 
@@ -170,6 +171,7 @@ comportamentul algoritmilor în prezența unui număr foarte mare de duplicate.
     
     
     \section{Algoritmi de sortare}
+    \label{sec:algoritmi}
 
     Această secțiune oferă o prezentare generală a algoritmilor de sortare analizați în această lucrare, evidențiind principiile de funcționare și complexitatea lor teoretică.
 
@@ -178,16 +180,16 @@ comportamentul algoritmilor în prezența unui număr foarte mare de duplicate.
     Deși este un algoritm foarte ineficient, Bubble Sort este adesea folosit în scop educațional pentru a ilustra conceptele de bază ale sortării.
 
 
-    	\begin{rhoenv}[frametitle=Origine și popularitate]
+        \begin{rhoenv}[frametitle=Origine și popularitate]
             Originea acestui algoritm este incertă \cite{astrachan2003bubble}, fiind menționat sub diferite denumiri în literatura de specialitate ca "Sorting by Exchange", "Sinking Sort", "Jump Down", "Sink Down" sau "Exchange Sort".
 
 
-Knuth l-a inclus în The Art of Computer Programming \cite{knuth1998sorting}, contribuind la consolidarea lui în literatura de specialitate, deși l-a criticat explicit.		\end{rhoenv}
+Knuth l-a inclus în The Art of Computer Programming \cite{knuth1998sorting}, contribuind la consolidarea lui în literatura de specialitate, deși l-a criticat explicit.     \end{rhoenv}
 
     Complexitatea \cite{knuth1998sorting} a acestui algoritm este $O(n^2)$ în varianta de bază, fără optimizări, și $O(n)$ în cel mai favorabil caz (când șirul este deja sortat) dacă este folosită o implementare optimizată. În medie, complexitatea este tot $O(n^2)$, ceea ce îl face ineficient pentru șiruri mari.
-   \newline Totodată,Bubble sort e mai încet decât alți algoritmi de sortare cu o complexitate $O(n^2)$ precum Insertion Sort sau Selection Sort (cu unele excepții evidențiate mai târziu), deoarece necesită mai multe interschimbări \cite{astrachan2003bubble} pentru a sorta șirul.
+   \newline Totodată, Bubble Sort este mai lent decât alți algoritmi de sortare cu o complexitate $O(n^2)$ precum Insertion Sort sau Selection Sort (cu unele excepții evidențiate mai târziu), deoarece necesită mai multe interschimbări \cite{astrachan2003bubble} pentru a sorta șirul.
    \newline
-   \newline Complexitatea de spațiu a acestui algoritm este $O(1)$, deoarece sortarea se face in-place (fără a aloca structuri de date auxiliare proporționale cu \textit{n}), fără a necesita spațiu suplimentar semnificativ.
+   \newline Complexitatea spațială a acestui algoritm este $O(1)$, deoarece sortarea se face in-place (fără a aloca structuri de date auxiliare proporționale cu \textit{n}), fără a necesita spațiu suplimentar semnificativ.
 \begin{code}
     \inputminted[style=friendly]{cpp}{cod_sursa/bubblesort.cpp}
     \caption{Implementarea Bubble Sort în C++.}
@@ -207,7 +209,7 @@ algoritmul era probabil folosit informal înainte \cite{knuth1998sorting}.
 
 Algoritmul este eficient pentru șiruri mici sau aproape sortate, având o 
 complexitate de $O(n)$ în cel mai favorabil caz și $O(n^2)$ în cazul mediu 
-și defavorabil \cite{knuth1998sorting}. Complexitatea de spațiu este $O(1)$, 
+și defavorabil \cite{knuth1998sorting}. Complexitatea spațială este $O(1)$, 
 deoarece sortarea se face in-place.
 
 Knuth menționează că poziția de inserare poate fi găsită prin căutare binară 
@@ -224,13 +226,13 @@ $O(n \log n)$ în majoritatea cazurilor \cite{bender2006insertionislogn}.
 
 
 
-Implementarea Insertion Sort prezentată în codul sursă \ref{lst:insertionsort} este o versiune clasică,fără optimizări ca căutarea binară pentru poziția de inserare menționată anterior.
+Implementarea Insertion Sort prezentată în codul sursă \ref{lst:insertionsort} este o versiune clasică, fără optimizări precum căutarea binară pentru poziția de inserare menționată anterior.
 
 \subsection{Merge Sort}
 
 Merge Sort este un algoritm de sortare bazat pe paradigma divide et impera, care împarte șirul în subșiruri mai mici, le sortează recursiv și apoi le combină pentru a obține șirul sortat final. A fost inventat de John von Neumann în 1945 \cite{knuth1998sorting}.
-Eficiența sa este de $O(n \log n)$ în toate cazurile,fără surprize sau cazuri excepționale, ceea ce îl face potrivit pentru șiruri mari. 
-\newline Un dezavantaj al acestui algoritm este complexitatea de spațiu, care este $O(n)$, deoarece necesită un spațiu auxiliar pentru a stoca subșirurile în timpul procesului de combinare. Totodată,natura recursivă a algoritmului necesită un spațiu suplimentar pentru stiva de apeluri, ceea ce îl face ineficient pentru șiruri foarte mici sau pentru sisteme cu resurse limitate.
+Eficiența sa este de $O(n \log n)$ în toate cazurile, fără surprize sau cazuri excepționale, ceea ce îl face potrivit pentru șiruri mari. 
+\newline Un dezavantaj al acestui algoritm este complexitatea spațială, care este $O(n)$, deoarece necesită un spațiu auxiliar pentru a stoca subșirurile în timpul procesului de combinare. Totodată, natura recursivă a algoritmului necesită un spațiu suplimentar pentru stiva de apeluri, ceea ce îl face ineficient pentru șiruri foarte mici sau pentru sisteme cu resurse limitate.
 
 \begin{code}
     \inputminted[style=friendly]{cpp}{cod_sursa/mergesort.cpp}
@@ -251,7 +253,7 @@ superioară în toate cazurile \cite{hoare1961quicksort, knuth1998sorting}.
 de Date, Universitatea de Vest din Timișoara, de Prof. Dr. D. Zaharie.}
 O problemă cunoscută a acestui algoritm este că performanța sa poate degrada la $O(n^2)$ în cazul în care pivotul ales este întotdeauna cel mai mic sau cel mai mare element, cum ar fi atunci când șirul este deja sortat sau sortat descrescător. Cu toate acestea, cu o alegere bună a pivotului (de exemplu, folosind metoda medianei), complexitatea medie și cea mai bună rămân $O(n \log n)$ \cite{knuth1998sorting}.
 O misconcepție comună este că Quick Sort este întotdeauna mai rapid decât Merge Sort sau Bubble Sort, dar acest lucru nu este întotdeauna adevărat, deoarece Quick Sort are nevoie de mai mult overhead pentru gestionarea recursiei și poate fi ineficient pe șiruri mici sau aproape sortate, unde Insertion Sort sau Bubble Sort pot performa mai bine \cite{knuth1998sorting}. Aceeași problemă o suferă și Merge Sort.
-Complexitatea de spațiu a Quick Sort este $O(\log n)$ în medie, datorită stivei de apeluri recursive, dar poate ajunge la $O(n)$ în cel mai defavorabil caz.
+Complexitatea spațială a Quick Sort este $O(\log n)$ în medie, datorită stivei de apeluri recursive, dar poate ajunge la $O(n)$ în cel mai defavorabil caz.
 
 O optimizare separată, numită Algoritmul Flagului Olandez 
 \cite{dijkstra1976discipline}, propusă de Dijkstra, modifică 
@@ -276,7 +278,7 @@ std::sort este o funcție de sortare din biblioteca standard C++ care oferă o i
 
 Implementarea specifică poate varia între diferite compilatoare și platforme. În compilatorul GCC, std::sort folosește o variantă a Introsort care începe cu Quick Sort și comută la Heap Sort dacă adâncimea recursivă depășește un prag specificat, prevenind astfel degradarea la $O(n^2)$ pe șiruri sortate sau aproape sortate. Pentru subșiruri foarte mici, algoritmul folosește Insertion Sort, mai eficient în acest context.
 
-Complexitatea std::sort este $O(n \log n)$ în toate cazurile \cite{musser1997introsort}, inclusiv cel defavorabil. Complexitatea de spațiu este $O(\log n)$, datorită stivei de recursivitate. Algoritmul nu este stabil — pentru stabilitate, biblioteca standard oferă \texttt{std::stable\_sort}.
+Complexitatea std::sort este $O(n \log n)$ în toate cazurile \cite{musser1997introsort}, inclusiv cel defavorabil. Complexitatea spațială este $O(\log n)$, datorită stivei de recursivitate. Algoritmul nu este stabil — pentru stabilitate, biblioteca standard oferă \texttt{std::stable\_sort}.
 
 Codul sursă al std::sort nu este unic, fiind adaptat diferitelor platforme și compilatoare. O implementare de referință a Introsort poate fi găsită în literatura de specialitate \cite{musser1997introsort}, iar implementarea din GCC este disponibilă în fișierul \texttt{bits/stl\_algo.h} \cite{gcc_stl_algo}.
 
@@ -288,7 +290,7 @@ Codul sursă al std::sort nu este unic, fiind adaptat diferitelor platforme și 
 
 În această lucrare, std::sort are rolul de referință pentru evaluarea algoritmilor implementați manual, oferind un punct de reper reprezentând o soluție optimizată și bine testată în scenarii diverse de date.
 
-O misconceptie foarte răspândită printre fanii și puriștii limbajului C++ este că std::sort este cel mai rapid algoritm de sortare posibil, dar acest lucru nu este întotdeauna adevărat.
+O misconcepție foarte răspândită printre fanii și puriștii limbajului C++ este că std::sort este cel mai rapid algoritm de sortare posibil, dar acest lucru nu este întotdeauna adevărat.
 
 Deși std::sort este extrem de optimizat și oferă performanță excelentă în majoritatea cazurilor, există algoritmi mai eficienți pentru date reale.
 \newline
@@ -304,18 +306,18 @@ Nu doresc să reinventez roata algoritmilor de sortare,
 mă interesează ce se întâmplă când roata \textit{adoarme}.
 
 
-\par Sleep sort este un algoritm creat de o persoană necunoscută pe platforma 4chan 
+\par Sleep Sort este un algoritm creat de o persoană necunoscută pe platforma 4chan 
 \cite{princeton_sleepsort}\cite{henney2023sleepsort}\cite{4chan2011sleepsort}
 \cite{geeksforgeeks_sleepsort}\cite{opengenus_sleepsort}\cite{devto_sleepsort}
-în 2011. Postarea \cite{4chan2011sleepsort} de pe 4chan a atras multă atenție asupra sa,având sute de comentarii,
-dar pentru oricine dorește să \textit{doarmă} bine noaptea nu e recomandat de citit mai mult de primele mesaje,
+în 2011. Postarea \cite{4chan2011sleepsort} de pe 4chan a atras multă atenție asupra sa, având sute de comentarii,
+dar pentru oricine dorește să \textit{doarmă} bine noaptea nu este recomandat de citit mai mult de primele mesaje,
 considerând natura nemoderată a platformei.
 
 \par Acest algoritm funcționează prin crearea unui thread \cite{cppreference_thread} pentru fiecare element din șir, 
 unde fiecare thread \textit{"doarme"} \cite{cppreference_sleep} pentru o perioadă de timp proporțională cu valoarea elementului său. 
 După ce se trezește, thread-ul tipărește valoarea sa, rezultând un șir sortat în ordine crescătoare.
 
-\par Deși e o idee foarte simplă, această metodă de sortare deschide ușa unor întrebări interesante:
+\par Deși este o idee foarte simplă, această metodă de sortare deschide ușa unor întrebări interesante:
 \begin{itemize}
     \item Cum determinăm timpul de \textit{somn} corect pentru fiecare thread? 
     \item Ce se întâmplă când thread-urile se trezesc în același timp, cum ar fi în cazul valorilor duplicate?
@@ -357,11 +359,11 @@ specificat, afectând ordinea de sortare.
 de \textit{somn} corect \cite{devto_sleepsort}, am folosit o abordare 
 empirică, ajustând timpul în funcție de valorile din șir și de 
 performanța observată în testele preliminare. De multe ori Sleep Sort 
-nu sorta corect cu timpuri prea mici, iar timpuri prea mari îl fac 
-inutil de lent, am căutat astfel un echilibru între corectitudine 
+nu sorta corect cu timpi prea mici, iar timpi prea mari îl fac 
+inutil de lent; am căutat astfel un echilibru între corectitudine 
 și performanță.
 
-\par Prioritizând corectitudinea,ceea ce Sleep Sort ar prefera pentru că,aidoma unui student, îi permite să \textit{doarmă} mai mult, am ales un timp de \textit{somn} 
+\par Prioritizând corectitudinea, ceea ce Sleep Sort ar prefera pentru că, aidoma unui student, îi permite să \textit{doarmă} mai mult, am ales un timp de \textit{somn} 
 de $100\text{ ms}$ pe unitate de valoare, conform formulei:
 
 \begin{equation}
@@ -374,8 +376,8 @@ valoarea $0$.
 
 \subsubsection{Problema elementelor duplicate}
 
-\par Surprinzător, problema elementelor duplicate nu există.Sleep Sort funcționează perfect chiar și cu valori duplicate, deoarece fiecare thread doarme pentru o perioadă de timp proporțională cu valoarea sa, iar thread-urile care corespund valorilor identice vor dormi pentru aceeași perioadă și se vor trezi în același timp.
-Desigur,acest lucru înseamnă că elementele duplicate vor avea fiecare un thread separat,ceea ce e foarte ineficient și ceea ce am rezolvat prin folosirea unui \texttt{std::unordered\_map} pentru a grupa elementele identice și a le procesa împreună.
+\par Surprinzător, problema elementelor duplicate nu există. Sleep Sort funcționează perfect chiar și cu valori duplicate, deoarece fiecare thread doarme pentru o perioadă de timp proporțională cu valoarea sa, iar thread-urile care corespund valorilor identice vor dormi pentru aceeași perioadă și se vor trezi în același timp.
+Desigur, acest lucru înseamnă că elementele duplicate vor avea fiecare un thread separat, ceea ce este foarte ineficient și ceea ce am rezolvat prin folosirea unui \texttt{std::unordered\_map} pentru a grupa elementele identice și a le procesa împreună.
 
 \subsubsection{Complexitatea algoritmului și influența sistemului 
 de operare și hardware-ului}
@@ -401,11 +403,11 @@ de cel mai lung interval de somn \cite{microsoft_timers}:
 \end{equation}
 
 unde $\max(A)$ este valoarea maximă din șirul $A$. Această 
-componentă este independentă de $n$,sortarea unui milion de 
+componentă este independentă de $n$, sortarea unui milion de 
 elemente cu valori între $1$ și $100$ durează același timp ca 
 sortarea a zece elemente cu aceleași valori.
 
-\par Complexitatea spațiu este determinată de trei componente:
+\par Complexitatea spațială este determinată de trei componente:
 vectorul de rezultate $v$ de dimensiune $O(n)$, 
 \texttt{std::unordered\_map} \cite{cppreference_map} care stochează 
 frecvențele celor $k$ valori unice în $O(k)$, și vectorul de 
@@ -416,7 +418,7 @@ fix pe stivă \cite{tanenbaum2014modern}. Prin urmare:
     S(n, k) = O(n) + O(k) + O(k) = O(n + k)
 \end{equation}
 
-Desigur,aceste calcule nu iau în considerare overhead-ul suplimentar cauzat de scheduling-ul thread-urilor și de rezoluția timer-ului, care pot afecta performanța reală a algoritmului în funcție de sistemul de operare și hardware-ul folosit \cite{microsoft_timers, tanenbaum2014modern}.
+Desigur, aceste calcule nu iau în considerare overhead-ul suplimentar cauzat de scheduling-ul thread-urilor și de rezoluția timer-ului, care pot afecta performanța reală a algoritmului în funcție de sistemul de operare și hardware-ul folosit \cite{microsoft_timers, tanenbaum2014modern}.
 Acești factori sunt fundamental imposibili de modelat teoretic, deoarece depind de implementarea specifică a sistemului de operare și de arhitectura hardware, precum și de încărcarea curentă a sistemului și de prioritățile thread-urilor.
 
 
@@ -426,17 +428,17 @@ Ambii algoritmi, Counting Sort și Radix Sort,
  sunt algoritmi de sortare non-comparativi care pot avea performanțe superioare std::sort în anumite condiții,
  în special pe șiruri cu o gamă limitată de valori sau cu multe duplicate \cite{knuth1998sorting}.
 
-Fără a mai menține suspans, Counting Sort și Radix Sort sunt mai rapizi decât Sleep Sort,dar nu mereu sunt cei mai eficienți.
+Fără a mai menține suspans, Counting Sort și Radix Sort sunt mai rapizi decât Sleep Sort, dar nu mereu sunt cei mai eficienți.
 
-\par O problemă majoră a counting sort este că necesită un vector auxiliar de dimensiune proporțională cu gama de valori din șir \cite{knuth1998sorting}. 
-Dacă această gamă este foarte mare, cum ar fi în cazul valorilor întregi între $1$ și $10^6$, counting sort devine ineficient din punct de vedere al spațiului, ocupând $O(k)$ unde $k$ este gama de valori, ceea ce poate fi prohibitiv pentru șiruri mari.
+\par O problemă majoră a Counting Sort este că necesită un vector auxiliar de dimensiune proporțională cu gama de valori din șir \cite{knuth1998sorting}. 
+Dacă această gamă este foarte mare, cum ar fi în cazul valorilor întregi între $1$ și $10^6$, Counting Sort devine ineficient din punct de vedere al spațiului, ocupând $O(k)$ unde $k$ este gama de valori, ceea ce poate fi prohibitiv pentru șiruri mari.
 Sleep Sort nu necesită un astfel de vector auxiliar și poate gestiona eficient șiruri cu o gamă largă de valori, deși performanța sa depinde de rezoluția timer-ului și de scheduling-ul thread-urilor.
 
 \par Un alt factor este că Sleep Sort exploatează în mod natural paralelismul hardware 
 \cite{tanenbaum2014modern}, thread-urile rulează concurent, 
 nu secvențial, ceea ce îl diferențiază fundamental de orice 
 algoritm clasic de sortare. 
-Acest fapt oferă Sleep Sort un avantaj dacă hardware-ul disponibil are resurse abundente,deci,cu destule nuclee și o rezoluție a timer-ului suficient de fină, nu este imposibil ca Sleep Sort să depășească performanța algoritmilor menționați anterior.
+Acest fapt oferă algoritmului Sleep Sort un avantaj dacă hardware-ul disponibil are resurse abundente, deci, cu destule nuclee și o rezoluție a timer-ului suficient de fină, nu este imposibil ca Sleep Sort să depășească performanța algoritmilor menționați anterior.
 
 
 \subsubsection{Numere negative și numere raționale}
@@ -483,30 +485,31 @@ Pe baza acestor proprietăți teoretice, ne așteptăm ca Merge Sort
 și std::sort să domine pe șiruri mari și aleatoare, Quick Sort să 
 se degradeze pe distribuțiile sortate, iar Sleep Sort să surprindă 
 pe distribuția plată unde $k = 5$ indiferent de $n$ sau pe distribuții cu valori mici. Aceste ipoteze 
-sunt evaluate empiric în Secțiunea~\ref{sec:rezultate},unde vom vedea dacă Sleep Sort se trezește la înălțimea așteptărilor sau dacă rămâne adormit în fața concurenței.
+sunt evaluate empiric în Secțiunea~\ref{sec:rezultate}, unde vom vedea dacă Sleep Sort se trezește la înălțimea așteptărilor sau dacă rămâne adormit în fața concurenței.
 
 
 
 \section{Rezultate}
+\label{sec:rezultate}
 
     Această secțiune prezintă rezultatele experimentale obținute în urma testării algoritmilor de sortare pe cele cinci distribuții de date descrise în Secțiunea~\ref{sec:distributii}. 
     Vom analiza performanța fiecărui algoritm în funcție de timpul de execuție, comparându-le cu așteptările teoretice formulate anterior.
-    \par De asemenea, codul sursă folosit pentru testarea algoritmilor și generarea datelor, precum și datele brute,sunt disponibile pe GitHub \ref{sec:GitHub Repository}, pentru a asigura transparența și reproducibilitatea rezultatelor.
+    \par De asemenea, codul sursă folosit pentru testarea algoritmilor și generarea datelor, precum și datele brute, sunt disponibile în secțiunea \textit{Github Repository} de la finalul lucrării, pentru a asigura transparența și reproducibilitatea rezultatelor.
 
 \subsection{Bubble Sort - Analiză}
 
     \begin{figure}[H]
-    	\centering
-    	\includegraphics[width=0.7\columnwidth]{figures/BubbleSort.png}
-    	\caption{Rezultatele testării Bubble Sort.}
-    	\label{fig:figure}
+        \centering
+        \includegraphics[width=0.7\columnwidth]{figures/BubbleSort.png}
+        \caption{Rezultatele testării Bubble Sort.}
+        \label{fig:bubblesort}
     \end{figure}
 
     Bubble Sort a performat conform așteptărilor, având un timp de execuție semnificativ mai mare decât ceilalți algoritmi, în special pe șirurile mari.
     Timpul său de execuție a crescut exponențial pe măsură ce dimensiunea șirului a crescut, confirmând complexitatea sa de $O(n^2)$ în medie și în cel mai defavorabil caz.
     \par Acest fapt a dus la excluderea acestuia din testele pe șirurile de dimensiuni foarte mari, deoarece timpul de execuție ar fi fost prohibitiv.
 
-        	\begin{rhoenv}[frametitle=Performanța asupra distribuțiilor Sortate și Aproape Sortate]
+            \begin{rhoenv}[frametitle=Performanța asupra distribuțiilor Sortate și Aproape Sortate]
                 După cum putem observa, dacă lista este deja sortată sau aproape sortată, Bubble Sort poate performa mult mai bine, având un timp de execuție liniar în cel mai favorabil caz.
                 Acest fapt se datorează optimizării care verifică dacă s-au făcut interschimbări în timpul unei treceri.
             \end{rhoenv}
@@ -515,41 +518,41 @@ sunt evaluate empiric în Secțiunea~\ref{sec:rezultate},unde vom vedea dacă Sl
 \subsection{Insertion Sort - Analiză}
 
     \begin{figure}[H]
-    	\centering
-    	\includegraphics[width=0.9\columnwidth]{figures/InsertionSort.png}
-    	\caption{Rezultatele testării Insertion Sort.}
-    	\label{fig:figure}
+        \centering
+        \includegraphics[width=0.9\columnwidth]{figures/InsertionSort.png}
+        \caption{Rezultatele testării Insertion Sort.}
+        \label{fig:insertionsort}
     \end{figure}
 
     Performanța Insertion Sort a fost în general mai bună decât cea a Bubble Sort, în special pe șirurile mici și aproape sortate, unde a avut un timp de execuție semnificativ mai mic.
     Acest lucru confirmă complexitatea acestuia și eficiența sa în scenariul datelor aproape sortate.
-    \par Totuși, pe șirurile mari, performanța sa a fost inferioră comparativ cu cea a altor algoritmi mai eficienți, la fel excluzând-ul din testele pe șirurile de dimensiuni mari.
+    \par Totuși, pe șirurile mari, performanța sa a fost inferioară comparativ cu cea a altor algoritmi mai eficienți, la fel excluzându-l din testele pe șirurile de dimensiuni mari.
   
 
 \subsection{Merge Sort - Analiză}
 
     \begin{figure}[H]
-    	\centering
-    	\includegraphics[width=0.7\columnwidth]{figures/MergeSort.png}
-    	\caption{Rezultatele testării Merge Sort.}
-    	\label{fig:figure}
+        \centering
+        \includegraphics[width=0.7\columnwidth]{figures/MergeSort.png}
+        \caption{Rezultatele testării Merge Sort.}
+        \label{fig:mergesort}
     \end{figure}
 
     Merge Sort a avut o performanță consistentă pe toate distribuțiile de date, confirmând complexitatea sa de $O(n \log n)$ în toate cazurile.
     Timpul său de execuție a crescut semnificativ pe măsură ce dimensiunea șirului a crescut, dar a rămas mult mai eficient decât Bubble Sort și Insertion Sort pe șirurile mari.
-    \par Un efect surprinzător este saltul în timp de execuție pe șirurile de tipul "Plat",unde timpul de sortare sare semnificativ (relativ cu mărimea șirului). Acest lucru se poate datora urmatorilor 2 factori:
+    \par Un efect surprinzător este saltul în timp de execuție pe șirurile de tipul "Plat", unde timpul de sortare sare semnificativ (relativ cu mărimea șirului). Acest lucru se poate datora următorilor 2 factori:
 
     \begin{itemize}
         \item Numărul mare de duplicate din șirurile de tipul "Plat" poate duce la o performanță mai slabă a Merge Sort, deoarece algoritmul nu este optimizat pentru a gestiona eficient elementele duplicate, ceea ce poate duce la un număr crescut de operații de combinare și la o utilizare mai intensă a memoriei.
         \item Overhead-ul necesar pentru gestionarea memoriei și a operațiilor de combinare în Merge Sort poate deveni mai evident pe șirurile cu multe duplicate, deoarece acestea pot necesita mai multe resurse.
-        \item Deși testele au fost rulate de sute de ori, variabilitatea în performanță nu ar trebui exclusă ca un factor,având în vedere factori ca hit-urile de cache și scheduling-ul thread-urilor în timpul execuției.
+        \item Deși testele au fost rulate de sute de ori, variabilitatea în performanță nu ar trebui exclusă ca un factor, având în vedere factori ca hit-urile de cache și scheduling-ul thread-urilor în timpul execuției.
     \end{itemize}
 
     \par
     Un alt efect așteptat a fost că performanța sa a fost mai slabă pe șirurile mici, unde overhead-ul algoritmului poate domina timpul de execuție, comparativ cu algoritmi ca Insertion Sort care sunt mai eficienți în acest context.
-    Bubble sort, de exemplu,este mai rapid cu o magnitudine de 10-100 ori pe șirurile de dimensiuni mici.
+    Bubble Sort, de exemplu, este mai rapid cu o magnitudine de 10-100 ori pe șirurile de dimensiuni mici.
 
-    Deși a fost mai lent decât std::sort, performanța sa a fost rezonabilă, având în vedere că este o implementare clasică fără optimizări specifice.Iar performanța foarte stabilă pe toate distribuțiile și dimensiunile șirurilor confirmă robustețea sa în fața diferitelor tipuri de date,sortând 2 milioane valori fără .
+    Deși a fost mai lent decât std::sort, performanța sa a fost rezonabilă, având în vedere că este o implementare clasică fără optimizări specifice. Iar performanța foarte stabilă pe toate distribuțiile și dimensiunile șirurilor confirmă robustețea sa în fața diferitelor tipuri de date, sortând 2 milioane de valori fără probleme.
 
 
     \par Personal, i-aș acorda nota 9 din 10.
@@ -558,29 +561,29 @@ sunt evaluate empiric în Secțiunea~\ref{sec:rezultate},unde vom vedea dacă Sl
 \subsection{Quick Sort - Analiză}
 
     \begin{figure}[H]
-    	\centering
-    	\includegraphics[width=0.7\columnwidth]{figures/QuickSort.png}
-    	\caption{Rezultatele testării Quick Sort.}
-    	\label{fig:figure}
+        \centering
+        \includegraphics[width=0.7\columnwidth]{figures/QuickSort.png}
+        \caption{Rezultatele testării Quick Sort.}
+        \label{fig:quicksort}
     \end{figure}
 
     Quick Sort a avut o performanță excelentă pe majoritatea distribuțiilor de date, confirmând complexitatea sa de $O(n \log n)$ în medie și în cel mai bun caz.
     Timpul său de execuție a crescut semnificativ pe șirurile sortate și aproape sortate, confirmând degradarea la $O(n^2)$ în aceste cazuri, ceea ce a dus la excluderea acestuia din testele pe șirurile de dimensiuni mari pentru aceste distribuții.
-    Pe lângă degradarea performanței,alegerea neoptimă a pivotului a dus la un număr crescut de operații de partiționare și la o utilizare mai intensă a memoriei, ceea ce a făcut ca Quick Sort să dea erori de "Stack Overflow" pe șirurile sortate și aproape sortate de dimensiuni mari, din cauza adâncimii excesive a recursiei.
+    Pe lângă degradarea performanței, alegerea suboptimă a pivotului a dus la un număr crescut de operații de partiționare și la o utilizare mai intensă a memoriei, ceea ce a făcut ca Quick Sort să dea erori de "Stack Overflow" pe șirurile sortate și aproape sortate de dimensiuni mari, din cauza adâncimii excesive a recursiei.
     \par Pe șirurile aleatoare și cu multe duplicate, performanța sa a fost foarte bună, dar a fost depășită de std::sort, care este optimizat pentru astfel de scenarii.
-    Comparativ cu Merge Sort, Quick Sort a avut nevoie de mai puțin overhead,astfel performând mult mai bine pe șirurile mici,dar mai slab față de algoritmele non-recursive.
+    Comparativ cu Merge Sort, Quick Sort a avut nevoie de mai puțin overhead, astfel performând mult mai bine pe șirurile mici, dar mai slab față de algoritmii non-recursivi.
 
 
 \subsection{std::sort - Analiză}
 
     \begin{figure}[H]
-    	\centering
-    	\includegraphics[width=0.7\columnwidth]{figures/StdSort.png}
-    	\caption{Rezultatele testării std::sort.}
-    	\label{fig:figure}
+        \centering
+        \includegraphics[width=0.7\columnwidth]{figures/StdSort.png}
+        \caption{Rezultatele testării std::sort.}
+        \label{fig:stdsort}
     \end{figure}
 
-    std::sort a avut o performanță excelentă pe toate distribuțiile de date, confirmând complexitatea sa de $O(n \log n)$ în toate cazurile,superioritatea acestuia pe date mici față de Merge Sort și Quick Sort fiind evidentă.
+    std::sort a avut o performanță excelentă pe toate distribuțiile de date, confirmând complexitatea sa de $O(n \log n)$ în toate cazurile, superioritatea acestuia pe date mici față de Merge Sort și Quick Sort fiind evidentă.
     \par Un efect surprinzător este că performanța sa a fost foarte bună pe șirurile de tipul "Plat", unde a depășit semnificativ Merge Sort, confirmând optimizarea sa pentru gestionarea eficientă a elementelor duplicate.
     De asemenea, performanța sa a fost excelentă pe șirurile sortate și aproape sortate, unde nu s-a degradat la $O(n^2)$ ca Quick Sort, datorită optimizării sale pentru astfel de scenarii.
 
@@ -589,19 +592,19 @@ sunt evaluate empiric în Secțiunea~\ref{sec:rezultate},unde vom vedea dacă Sl
 
 \subsection{Sleep Sort - Analiză}
     
-    Având în vedere natura sa neconvențională, nu putem măsura performanța Sleep Sort folosind dimensiunea array-ului de intrare,deoarece timpul de execuție depinde în mod direct de valorile elementelor, nu de numărul lor.
-    \par Timpul de citire e practic neglijabil comparativ cu timpul de așteptare, deci nu are sens să-l măsurăm în funcție de $n$,acesta fiind relevant doar pentru compararea cu algoritmii clasici.
+    Având în vedere natura sa neconvențională, nu putem măsura performanța Sleep Sort folosind dimensiunea array-ului de intrare, deoarece timpul de execuție depinde în mod direct de valorile elementelor, nu de numărul lor.
+    \par Timpul de citire este practic neglijabil comparativ cu timpul de așteptare, deci nu are sens să-l măsurăm în funcție de $n$, acesta fiind relevant doar pentru compararea cu algoritmii clasici.
 
 
     \begin{figure}[H]
-    	\centering
-    	\includegraphics[width=0.7\columnwidth]{figures/SleepSort.png}
-    	\caption{Rezultatele testării Sleep Sort.}
-    	\label{fig:figure}
+        \centering
+        \includegraphics[width=0.7\columnwidth]{figures/SleepSort.png}
+        \caption{Rezultatele testării Sleep Sort.}
+        \label{fig:sleepsort}
     \end{figure}
     
-        \par Putem observa că timpul de sortare, în conformitate cu așteptările, a crescut semnificativ pe măsură ce valorile elementelor au crescut, confirmând dependența sa de valorile din șir,totuși viteza nu e impractică, considerând independența sa față de $n$.
-    \par Pentru a aduce această "super putere" a Sleep Sort la extrem, am testat Sleep sort pe un șir de 2 milioane elemente,toate având valoarea între 1 și 2, rezultatele sunt următoarele:
+        \par Putem observa că timpul de sortare, în conformitate cu așteptările, a crescut semnificativ pe măsură ce valorile elementelor au crescut, confirmând dependența sa de valorile din șir, totuși viteza nu este impractică, considerând independența sa față de $n$.
+    \par Pentru a aduce această "super putere" a Sleep Sort la extrem, am testat Sleep Sort pe un șir de 2 milioane elemente, toate având valoarea între 1 și 2, rezultatele sunt următoarele:
 
     \begin{table}[h]
 \centering
@@ -620,8 +623,7 @@ Sorted        & 0.8755 & 0.6050 & \textbf{0.4451} \\
 \label{tab:sleep_sort_wins}
 \end{table}
 
-    \par După cum putem observa,Sleep Sort s-a trezit la înălțimea așteptărilor, depășind atât Merge Sort, cât și std::sort pe toate cele cinci distribuții de date, fiind de 2 ori mai rapid decât Merge Sort și de aproximativ 1.4 ori mai rapid decât std::sort, confirmând avantajul său semnificativ în aceste condiții,
-        dovedind că secretul performanței e, la urma urmei, un somn bun.
+    \par După cum putem observa, Sleep Sort s-a trezit la înălțimea așteptărilor, depășind atât Merge Sort, cât și std::sort pe toate cele cinci distribuții de date, fiind de 2 ori mai rapid decât Merge Sort și de aproximativ 1.4 ori mai rapid decât std::sort, confirmând avantajul său semnificativ în aceste condiții, dovedind că secretul performanței e, la urma urmei, un somn bun.
 
 
 
@@ -630,30 +632,30 @@ Sorted        & 0.8755 & 0.6050 & \textbf{0.4451} \\
     Bubble Sort și Insertion Sort au confirmat complexitatea $O(n^2)$ documentată de Knuth \cite{knuth1998sorting}, fără surprize.
 
 
-  \par *Merge Sort a confirmat complexitatea $O(n \log n)$
- $O(n\log n)$ în toate cazurile, dar a avut o performanță mai slabă decât Quick Sort și pe șirurile de tipul "Plat" de mărime mică, ceea ce poate fi atribuit mai multor factori discutați în subsecțiunea de analiză a acestuia.
+  \par Merge Sort a confirmat complexitatea $O(n \log n)$ în toate cazurile, dar a avut o performanță mai slabă decât Quick Sort și pe șirurile de tipul "Plat" de dimensiuni mici, ceea ce poate fi atribuit mai multor factori discutați în subsecțiunea de analiză a acestuia.
 
-\par Quick Sort a degradat exact unde teoria prezice,pe date sortate și reverse-sortate,confirmând analiza clasică \cite{hoare1961quicksort},și a eșuat pe șirurile mari din aceste distribuții din cauza alegerii ineficientă a pivotului, așa cum era de așteptat.
+\par Quick Sort a degradat exact unde teoria prezice, pe date sortate și sortate descrescător, confirmând analiza clasică \cite{hoare1961quicksort}, și a eșuat pe șirurile mari din aceste distribuții din cauza alegerii ineficiente a pivotului, așa cum era de așteptat.
 
-\par   std::sort a performat conform descrierii Introsort din Musser \cite{musser1997introsort}, inclusiv comportamentul superior pe șiruri aproape sortate față de Quick Sort pur,cât și pe șiruri mici,fără necesitatea a unui overhead de recursivitate.
+\par std::sort a performat conform descrierii Introsort din Musser \cite{musser1997introsort}, inclusiv comportamentul superior pe șiruri aproape sortate față de Quick Sort pur, cât și pe șiruri mici, fără necesitatea unui overhead de recursivitate.
     
-\par    Sleep Sort nu are literatură de specialitate în sensul academic al termenului,având doar implementări și articole informale \cite{princeton_sleepsort, henney2023sleepsort}. 
+\par Sleep Sort nu are literatură de specialitate în sensul academic al termenului, având doar implementări și articole informale \cite{princeton_sleepsort, henney2023sleepsort}. 
 \par Nu există lucrări peer-reviewed care să analizeze comportamentul său pe date reale, complexitatea sa practică sau comparații cu algoritmi non-comparativi.
     Prin urmare, această secțiune nu poate compara rezultatele cu un corp de cunoștințe existent, pentru că acel corp nu există.
 
-\par Contribuția principală a acestei lucrări este tocmai umplerea acestui gol în literatură, oferind nu doar o analiză detailată a performanței Sleep Sort pe date reale, ci și o optimizare semnificativă a implementării sale pentru a gestiona eficient valorile duplicate, ceea ce nu a fost abordat în niciuna dintre sursele informale existente.
-\par   \textbf{Chiar și dacă Sleep Sort este inferior în general față de Counting Sort și Radix Sort, performanța sa în scenarii specifice, cum ar fi șirurile cu o gamă limitată de valori sau cu multe duplicate, oferă o perspectivă interesantă despre cum putem exploata paralelismul hardware pentru a obține performanțe competitive în sortare, chiar și cu o abordare neconvențională.}
+\par Contribuția principală a acestei lucrări este tocmai umplerea acestui gol în literatura de specialitate, oferind nu doar o analiză detaliată a performanței Sleep Sort pe date reale, ci și o optimizare semnificativă a implementării sale pentru a gestiona eficient valorile duplicate, ceea ce nu a fost abordat în niciuna dintre sursele informale existente.
+\par \textbf{Chiar și dacă Sleep Sort este inferior în general față de Counting Sort și Radix Sort, performanța sa în scenarii specifice, cum ar fi șirurile cu o gamă limitată de valori sau cu multe duplicate, oferă o perspectivă interesantă despre cum putem exploata paralelismul hardware pentru a obține performanțe competitive în sortare, chiar și cu o abordare neconvențională.}
 
 
 
-		\begin{rhoenv}[frametitle=Direcții viitoare de cercetare]
-Ca o direcție potențială de explorare a acestui algoritm, ar fi interesant să investigăm dacă ar fi eficientă folosirea sleep sort-ului cu un timp  de somn foarte scurt, cum ar fi 30ms sau mai puțin,pentru obținerea unui șir aproape sortat, care să fie apoi finalizat cu un algoritm clasic de sortare, cum ar fi Insertion Sort, care este foarte eficient pe șiruri aproape sortate. 
+        \begin{rhoenv}[frametitle=Direcții viitoare de cercetare]
+Ca o direcție potențială de explorare a acestui algoritm, ar fi interesant să investigăm dacă ar fi eficientă folosirea Sleep Sort-ului cu un timp de somn foarte scurt, cum ar fi 30ms sau mai puțin, pentru obținerea unui șir aproape sortat, care să fie apoi finalizat cu un algoritm clasic de sortare, cum ar fi Insertion Sort, care este foarte eficient pe șiruri aproape sortate. 
 Această combinație ar putea oferi o performanță excelentă pe șiruri cu o gamă limitată de valori sau cu multe duplicate, exploatând avantajele ambilor algoritmi.
-\par Totodată,găsirea unei limite inferioare pentru timpul de somn, sub care Sleep Sort devine ineficient, ar fi o direcție interesantă de cercetare, deoarece ar putea oferi o perspectivă asupra rezoluției timer-ului necesare pentru a obține performanțe competitive cu această abordare.
-		\end{rhoenv}
+\par Totodată, găsirea unei limite inferioare pentru timpul de somn, sub care Sleep Sort devine ineficient, ar fi o direcție interesantă de cercetare, deoarece ar putea oferi o perspectivă asupra rezoluției timer-ului necesare pentru a obține performanțe competitive cu această abordare.
+        \end{rhoenv}
 
 
 \section{Concluzie}
+\label{sec:concluzii}
 
 Această lucrare a analizat experimental șase algoritmi de sortare 
 pe cinci distribuții de date, cu dimensiuni între $10$ și $2.000.000$ 
@@ -667,16 +669,16 @@ scenariilor practice în C++.
 algoritmii pe care îi știm deja. Este despre cel pe care nu îl luam 
 în serios.
 
-Am depășit dificultățile asociate cu implementarea unui algoritm neconvențional,bazat pe multi-threading,pentru a demonstra că acesta este nu doar o curiozitate, ci o soluție viabilă în anumite condiții.
+Am depășit dificultățile asociate cu implementarea unui algoritm neconvențional, bazat pe multi-threading, pentru a demonstra că acesta este nu doar o curiozitate, ci o soluție viabilă în anumite condiții.
 Sleep Sort a surprins prin performanța sa pe șirurile cu o gamă limitată de valori și cu multe duplicate,
 depășind atât Merge Sort, cât și std::sort în aceste scenarii, confirmând că uneori, chiar și în lumea algoritmilor de sortare, un somn bun poate fi cheia succesului.
 
-\par Am adus o contribuție în litearura de specialitate și o implementare optimizată a unui algoritm de sortare,ceea ce poate fi rezumat printr-o singură propoziție: "Somnul este esențial pentru performanță, chiar și în sortare."
+\par Am adus o contribuție în literatura de specialitate și o implementare optimizată a unui algoritm de sortare, ceea ce poate fi rezumat printr-o singură propoziție: "Somnul este esențial pentru performanță, chiar și în sortare."
 
 \section*{Github Repository}
 \addcontentsline{toc}{section}{Github Repository}
 
-    Pe acest Repository Github este disponibil codul sursă a tuturor algoritmilor, precum și scripturile de testare,fișierul Excel și datele brute folosite pentru a genera rezultatele din această lucrare.
+    În acest Repository Github este disponibil codul sursă al tuturor algoritmilor, precum și scripturile de testare, fișierul Excel și datele brute folosite pentru a genera rezultatele din această lucrare.
 
 \begin{center}
     \setlength{\tabcolsep}{1pt}
