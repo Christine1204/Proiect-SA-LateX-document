@@ -1,0 +1,15 @@
+[0] Config.pm:328> INFO - This is Biber 2.21
+[1] Config.pm:331> INFO - Logfile is 'main.blg'
+[805] biber-MSWIN64:342> INFO - === 
+[1063] Biber.pm:421> INFO - Reading 'main.bcf'
+[1435] Biber.pm:1002> INFO - Found 20 citekeys in bib section 0
+[1494] Biber.pm:4487> INFO - Processing section 0
+[1567] Biber.pm:4678> INFO - Looking for bibtex file 'rho.bib' for section 0
+[1751] bibtex.pm:1713> INFO - LaTeX decoding ...
+[1844] bibtex.pm:1519> INFO - Found BibTeX data source 'rho.bib'
+[2243] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[2243] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[2244] Biber.pm:4307> INFO - Sorting list 'ynt/global//global/global/global' of type 'entry' with template 'ynt' and locale 'en-US'
+[2244] Biber.pm:4313> INFO - No sort tailoring available for locale 'en-US'
+[2290] bbl.pm:676> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[2312] bbl.pm:779> INFO - Output to main.bbl

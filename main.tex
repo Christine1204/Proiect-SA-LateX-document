@@ -114,7 +114,7 @@ neconvențional bazat pe concurență, pentru a investiga dacă poate fi
 competitiv în condiții specifice.
 
 
-Lucrarea este organizată astfel: Secțiunea~\ref{sec:algoritmi} descrie 
+Lucrarea este organizată astfel:Secțiunea~\ref{sec:DateIntrare} definește datele și distribuțiile sortate, Secțiunea~\ref{sec:algoritmi} descrie 
 algoritmii, Secțiunea~\ref{sec:ipoteze} prezintă ipotezele teoretice verificate, Secțiunea~\ref{sec:rezultate} analizează rezultatele, 
 iar Secțiunea~\ref{sec:concluzii} sintetizează concluziile.
 
@@ -128,7 +128,7 @@ cu duplicate, și am rezolvat asta grupând elementele identice printr-un
 Restul algoritmilor nu sunt creați de mine, fiind implementări standard disponibile în literatură și online,disponibile în referințele bibliografice.
 
 \section{Date de Intrare}
-
+\label{sec:DateIntrare}
     \subsection{Generalități}
     Această secțiune oferă o prezentare generală a datelor folosite în această lucrare, evidențiind principiile de funcționare și complexitatea lor teoretică.
     Algoritmii de sortare (mai puțin Sleep Sort) pot sorta orice tip de date, atâta timp cât există o relație de ordine definită între ele.
@@ -253,7 +253,7 @@ superioară în toate cazurile \cite{hoare1961quicksort, knuth1998sorting}.
 \footnote{Observație atribuită cursului de Algoritmi și Structuri 
 de Date, Universitatea de Vest din Timișoara, de Prof. Dr. D. Zaharie.}
 O problemă cunoscută a acestui algoritm este că performanța sa poate degrada la $O(n^2)$ în cazul în care pivotul ales este întotdeauna cel mai mic sau cel mai mare element, cum ar fi atunci când șirul este deja sortat sau sortat descrescător. Cu toate acestea, cu o alegere bună a pivotului (de exemplu, folosind metoda medianei), complexitatea medie și cea mai bună rămân $O(n \log n)$ \cite{knuth1998sorting}.
-O misconcepție comună este că Quick Sort este întotdeauna mai rapid decât Merge Sort sau Bubble Sort, dar acest lucru nu este întotdeauna adevărat, deoarece Quick Sort are nevoie de mai mult overhead pentru gestionarea recursiei și poate fi ineficient pe șiruri mici sau aproape sortate, unde Insertion Sort sau Bubble Sort pot performa mai bine \cite{knuth1998sorting}. Aceeași problemă o suferă și Merge Sort.
+\par O misconcepție comună este că Quick Sort este întotdeauna mai rapid decât Merge Sort sau Bubble Sort, dar acest lucru nu este întotdeauna adevărat, deoarece Quick Sort are nevoie de mai mult overhead pentru gestionarea recursiei și poate fi ineficient pe șiruri mici sau aproape sortate, unde Insertion Sort sau Bubble Sort pot performa mai bine \cite{knuth1998sorting}. Aceeași problemă o suferă și Merge Sort.
 Complexitatea spațială a Quick Sort este $O(\log n)$ în medie, datorită stivei de apeluri recursive, dar poate ajunge la $O(n)$ în cel mai defavorabil caz.
 
 O optimizare separată, numită Algoritmul Flagului Olandez 
@@ -486,7 +486,7 @@ Pe baza acestor proprietăți teoretice, ne așteptăm ca Merge Sort
 și std::sort să domine pe șiruri mari și aleatoare, Quick Sort să 
 se degradeze pe distribuțiile sortate, iar Sleep Sort să surprindă 
 pe distribuția plată unde $k = 5$ indiferent de $n$ sau pe distribuții cu valori mici. Aceste ipoteze 
-sunt evaluate empiric în Secțiunea~\ref{sec:rezultate}, unde vom vedea dacă Sleep Sort se trezește la înălțimea așteptărilor sau dacă rămâne adormit în fața concurenței.
+sunt evaluate empiric în secțiunea următoare, unde vom vedea dacă Sleep Sort se trezește la înălțimea așteptărilor sau dacă rămâne adormit în fața concurenței.
 
 
 
@@ -497,6 +497,10 @@ sunt evaluate empiric în Secțiunea~\ref{sec:rezultate}, unde vom vedea dacă S
     Vom analiza performanța fiecărui algoritm în funcție de timpul de execuție, comparându-le cu așteptările teoretice formulate anterior.
     \par De asemenea, codul sursă folosit pentru testarea algoritmilor și generarea datelor, precum și datele brute, sunt disponibile în secțiunea \textit{Github Repository} de la finalul lucrării, pentru a asigura transparența și reproducibilitatea rezultatelor.
 
+    \par Măsurările obținute au fost măsurate folosind funcția \texttt{std::chrono::high\_resolution\_clock}, care oferă o rezoluție suficient de fină pentru a evalua performanța algoritmilor, în special pe șirurile mici și medii.
+     Am ales această metodă pentru rezoluția sa fină, necesară în special pentru șirurile mici, cu mențiunea că rezultatele pot varia în funcție de încărcarea curentă a sistemului și de prioritățile thread-urilor.
+     Pentru a minimiza această variabilitate, testurile au avut loc doar când sistemul era în stare de repaus, fără alte aplicații care să ruleze în fundal, și au fost rulate de sute de ori pentru fiecare combinație de algoritm și distribuție, luând media rezultatelor pentru a obține o estimare mai stabilă a performanței.
+     \par Sleep Sort a influențat această decizie deoarece, dacă am fi măsurat timpul bazat pe cicluri de procesor, Sleep Sort ar sorta orice șir instantaneu, și am ieși cu ideea că am revoluționat problema sortării,un vis pentru orice informatician.
 \subsection{Bubble Sort - Analiză}
 
     \begin{figure}[H]

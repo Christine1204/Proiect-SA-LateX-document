@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.26)  4 MAY 2026 21:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.26)  7 MAY 2026 14:01
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1801,10 +1801,10 @@ Package mdframed Info: mdframed works in twoside mode on input line 184.
 \pydata@fh@0=\write7
 \openout7 = `_FAD58DE7366495DB4650CFEFAC2FCD61.data.minted'.
 
-runsystem(latexminted config  --timestamp 20260504213510 FAD58DE7366495DB4650CFEFAC2FCD61)...executed safely (allowed).
+runsystem(latexminted config  --timestamp 20260507140120 FAD58DE7366495DB4650CFEFAC2FCD61)...executed safely (allowed).
 
  (./_FAD58DE7366495DB4650CFEFAC2FCD61.config.minted)
-runsystem(latexminted cleanconfig  --timestamp 20260504213510 FAD58DE7366495DB4650CFEFAC2FCD61)...executed safely (allowed).
+runsystem(latexminted cleanconfig  --timestamp 20260507140120 FAD58DE7366495DB4650CFEFAC2FCD61)...executed safely (allowed).
 
  (./_minted/friendly.style.minted) (./_minted/A671A6B59B4EAF2E3C0228F624956C27.highlight.minted
 Underfull \hbox (badness 10000) in paragraph at lines 190--1
@@ -1861,47 +1861,56 @@ LaTeX Font Info:    Font shape `T1/FiraMono-TOsF/regular/it' in size <7> not ava
 LaTeX Font Info:    Font shape `T1/FiraMono-TOsF/regular/sl' will be
 (Font)              scaled to size 5.60002pt on input line 482.
 [5]
-<figures/BubbleSort.png, id=278, 374.5995pt x 389.65575pt>
+Underfull \hbox (badness 10000) in paragraph at lines 500--503
+[]\T1/stix2/m/n/9 (+20) M sur rile ob[]inute au fost m -surate folosind func[]ia
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 500--503
+\T1/FiraMono-TOsF/regular/n/9 std::chrono::high_resolution_clock\T1/stix2/m/n/9 (+20) , care ofer  o rezolu[]ie
+ []
+
+<figures/BubbleSort.png, id=278, 392.667pt x 407.72325pt>
 File: figures/BubbleSort.png Graphic file (type png)
 <use figures/BubbleSort.png>
-Package pdftex.def Info: figures/BubbleSort.png  used on input line 504.
-(pdftex.def)             Requested size: 180.7308pt x 187.99582pt.
-Package mdframed Info: mdframed works in twoside mode on input line 513.
-<figures/InsertionSort.png, id=280, 373.99725pt x 392.667pt>
+Package pdftex.def Info: figures/BubbleSort.png  used on input line 508.
+(pdftex.def)             Requested size: 180.7308pt x 187.66072pt.
+Package mdframed Info: mdframed works in twoside mode on input line 517.
+<figures/InsertionSort.png, id=280, 392.06474pt x 408.3255pt>
 File: figures/InsertionSort.png Graphic file (type png)
 <use figures/InsertionSort.png>
-Package pdftex.def Info: figures/InsertionSort.png  used on input line 523.
-(pdftex.def)             Requested size: 232.36761pt x 243.97229pt.
+Package pdftex.def Info: figures/InsertionSort.png  used on input line 527.
+(pdftex.def)             Requested size: 232.36761pt x 242.00029pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
-<figures/MergeSort.png, id=281, 375.20175pt x 389.65575pt>
+<figures/MergeSort.png, id=281, 394.47375pt x 410.7345pt>
 File: figures/MergeSort.png Graphic file (type png)
 <use figures/MergeSort.png>
-Package pdftex.def Info: figures/MergeSort.png  used on input line 537.
-(pdftex.def)             Requested size: 180.7308pt x 187.69853pt.
+Package pdftex.def Info: figures/MergeSort.png  used on input line 541.
+(pdftex.def)             Requested size: 180.7308pt x 188.18181pt.
  [6 <./figures/BubbleSort.png> <./figures/InsertionSort.png> <./figures/MergeSort.png>]
-Underfull \hbox (badness 1117) in paragraph at lines 549--550
+Underfull \hbox (badness 1117) in paragraph at lines 553--554
 []\T1/stix2/m/n/9 (+20) De[]i testele au fost ru-late de sute de ori, vari-abil-i-tatea în
  []
 
-<figures/QuickSort.png, id=293, 376.40625pt x 392.06474pt>
+<figures/QuickSort.png, id=293, 394.47375pt x 410.7345pt>
 File: figures/QuickSort.png Graphic file (type png)
 <use figures/QuickSort.png>
-Package pdftex.def Info: figures/QuickSort.png  used on input line 566.
-(pdftex.def)             Requested size: 180.7308pt x 188.25475pt.
-<figures/StdSort.png, id=294, 374.5995pt x 389.0535pt>
+Package pdftex.def Info: figures/QuickSort.png  used on input line 570.
+(pdftex.def)             Requested size: 180.7308pt x 188.18181pt.
+<figures/StdSort.png, id=294, 391.4625pt x 410.7345pt>
 File: figures/StdSort.png Graphic file (type png)
 <use figures/StdSort.png>
-Package pdftex.def Info: figures/StdSort.png  used on input line 582.
-(pdftex.def)             Requested size: 180.7308pt x 187.70526pt.
+Package pdftex.def Info: figures/StdSort.png  used on input line 586.
+(pdftex.def)             Requested size: 180.7308pt x 189.62956pt.
 <figures/SleepSort.png, id=295, 305.34074pt x 311.9655pt>
 File: figures/SleepSort.png Graphic file (type png)
 <use figures/SleepSort.png>
-Package pdftex.def Info: figures/SleepSort.png  used on input line 602.
+Package pdftex.def Info: figures/SleepSort.png  used on input line 606.
 (pdftex.def)             Requested size: 180.7308pt x 184.65784pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -1910,19 +1919,19 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [7 <./figures/QuickSort.png> <./figures/stdsort.png>]
-Underfull \hbox (badness 1320) in paragraph at lines 627--628
+Underfull \hbox (badness 1320) in paragraph at lines 631--632
 []\T1/stix2/m/n/9 (+20) Dup  cum putem ob-serva, Sleep Sort s-a trezit la în l[]imea
  []
 
 LaTeX Font Info:    Font shape `T1/FiraSans-OsF/b/n' in size <6> not available
-(Font)              Font shape `T1/FiraSans-OsF/bold/n' tried instead on input line 631.
+(Font)              Font shape `T1/FiraSans-OsF/bold/n' tried instead on input line 635.
 LaTeX Font Info:    Font shape `T1/FiraSans-OsF/bold/n' will be
-(Font)              scaled to size 6.0pt on input line 631.
-Package mdframed Info: mdframed works in twoside mode on input line 651.
-LaTeX Font Info:    Trying to load font information for U+fontawesomebrands0 on input line 687.
+(Font)              scaled to size 6.0pt on input line 635.
+Package mdframed Info: mdframed works in twoside mode on input line 655.
+LaTeX Font Info:    Trying to load font information for U+fontawesomebrands0 on input line 691.
 (c:/texlive/2026/texmf-dist/tex/latex/fontawesome5/ufontawesomebrands0.fd)
 LaTeX Font Info:    Font shape `U/fontawesomebrands0/solid/n' in size <8> not available
-(Font)              Font shape `U/fontawesomebrands0/regular/n' tried instead on input line 687.
+(Font)              Font shape `U/fontawesomebrands0/regular/n' tried instead on input line 691.
  [8{c:/texlive/2026/texmf-dist/fonts/enc/dvips/fontawesome5/fa5brands0.enc}{c:/texlive/2026/texmf-dist/fonts/enc/dvips/stix2-type1/stix2-t1sc.enc} <./figures/SleepSort.png>] [9
 
 ] 
@@ -1937,15 +1946,15 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 58046 strings out of 467525
- 1190890 string characters out of 5423209
- 2167736 words of memory out of 5000000
- 85545 multiletter control sequences out of 15000+600000
+ 58048 strings out of 467525
+ 1190929 string characters out of 5423209
+ 2167810 words of memory out of 5000000
+ 85547 multiletter control sequences out of 15000+600000
  1280039 words of font info for 553 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  137i,20n,143p,1076b,2031s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2026/texmf-dist/fonts/type1/public/fira/FiraMono-Bold.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/fira/FiraMono-Oblique.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/fira/FiraMono-Regular.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/fira/FiraSans-Bold.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/fira/FiraSans-BoldItalic.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/fira/FiraSans-Italic.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/fira/FiraSans-Regular.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/fontawesome5/FontAwesome5Brands-Regular.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/stix2-type1/STIX2Math.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/stix2-type1/STIX2Text-Bold.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/stix2-type1/STIX2Text-Italic.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/stix2-type1/STIX2Text-Regular.pfb>
-Output written on main.pdf (9 pages, 1192814 bytes).
+Output written on main.pdf (9 pages, 1116762 bytes).
 PDF statistics:
  555 PDF objects out of 1000 (max. 8388607)
  437 compressed objects within 5 object streams
