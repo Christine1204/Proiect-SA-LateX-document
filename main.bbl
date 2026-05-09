@@ -76,6 +76,42 @@
       \field{title}{A Discipline of Programming}
       \field{year}{1976}
     \endentry
+    \entry{bentley1993engineering}{article}{}{}
+      \name{author}{2}{}{%
+        {{hash=7a1dd93236fc47b86cccf902fbf4f26d}{%
+           family={Bentley},
+           familyi={B\bibinitperiod},
+           given={Jon\bibnamedelima L.},
+           giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
+        {{hash=00c080626e1a5c8db79998a67c75332e}{%
+           family={McIlroy},
+           familyi={M\bibinitperiod},
+           given={M.\bibnamedelimi Douglas},
+           giveni={M\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Wiley}%
+      }
+      \strng{namehash}{d415d69452cb89bbe447c594c58fc7c6}
+      \strng{fullhash}{d415d69452cb89bbe447c594c58fc7c6}
+      \strng{fullhashraw}{d415d69452cb89bbe447c594c58fc7c6}
+      \strng{bibnamehash}{d415d69452cb89bbe447c594c58fc7c6}
+      \strng{authorbibnamehash}{d415d69452cb89bbe447c594c58fc7c6}
+      \strng{authornamehash}{d415d69452cb89bbe447c594c58fc7c6}
+      \strng{authorfullhash}{d415d69452cb89bbe447c594c58fc7c6}
+      \strng{authorfullhashraw}{d415d69452cb89bbe447c594c58fc7c6}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Software: Practice and Experience}
+      \field{number}{11}
+      \field{title}{Engineering a sort function}
+      \field{volume}{23}
+      \field{year}{1993}
+      \field{pages}{1249\bibrangedash 1265}
+      \range{pages}{17}
+    \endentry
     \entry{musser1997introsort}{article}{}{}
       \name{author}{1}{}{%
         {{hash=275cfd8ff6a2299f5e96b34576b5832f}{%
@@ -500,6 +536,48 @@
       \field{howpublished}{\url{https://en.cppreference.com/w/cpp/thread/thread}}
       \field{title}{std::thread}
       \field{year}{2024}
+    \endentry
+    \entry{rai2025comparative}{inproceedings}{}{}
+      \name{author}{3}{}{%
+        {{hash=bcad209f36939a17c7195c8eb9c36e06}{%
+           family={Rai},
+           familyi={R\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+        {{hash=8d531f698db842ff6f2321a45df202cf}{%
+           family={Parmar},
+           familyi={P\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod}}}%
+        {{hash=3e8dea8c685949631532a9eddb35edfa}{%
+           family={Sharma},
+           familyi={S\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{f8fa024bafecfc86b25d3d4fcc176cf0}
+      \strng{fullhash}{8fe972e76ccf02434bbb5006264e1d6e}
+      \strng{fullhashraw}{8fe972e76ccf02434bbb5006264e1d6e}
+      \strng{bibnamehash}{8fe972e76ccf02434bbb5006264e1d6e}
+      \strng{authorbibnamehash}{8fe972e76ccf02434bbb5006264e1d6e}
+      \strng{authornamehash}{f8fa024bafecfc86b25d3d4fcc176cf0}
+      \strng{authorfullhash}{8fe972e76ccf02434bbb5006264e1d6e}
+      \strng{authorfullhashraw}{8fe972e76ccf02434bbb5006264e1d6e}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2025 3rd International Conference on Intelligent Data Communication Technologies and Internet of Things (IDCIoT)}
+      \field{title}{Comparative Analysis of Sorting Algorithms: Time Complexity and Practical Applications}
+      \field{year}{2025}
+      \field{pages}{26\bibrangedash 32}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1109/IDCIOT64235.2025.10915063
+      \endverb
     \endentry
   \enddatalist
 \endrefsection

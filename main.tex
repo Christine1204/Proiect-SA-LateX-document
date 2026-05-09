@@ -26,7 +26,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \documentclass[9pt,a4paper,twocolumn,twoside]{rho-class/rho}
-\usepackage[english]{babel}
+\usepackage[romanian]{babel}
 
 %% Spanish babel recomendation
 % \usepackage[spanish,es-nodecimaldot,es-noindentfirst]{babel}
@@ -106,6 +106,15 @@ algoritmului decât de orice altă optimizare. În contextul sortării, una
 dintre operațiile cele mai frecvente în software, această alegere poate 
 face diferența pe date reale, care rareori sunt perfect distribuite.
 
+Sortarea reprezintă una dintre operațiile fundamentale în informatică,
+cu aplicații directe în baze de date, motoare de căutare, algoritmi de 
+compresie și procesarea datelor la scară largă. Conform estimărilor 
+clasice, o parte semnificativă din timpul de calcul al sistemelor reale 
+este dedicată operațiilor de ordonare a datelor \cite{knuth1998sorting}.
+Alegerea unui algoritm inadecvat poate dubla sau tripla consumul de 
+resurse pe date reale față de date artificiale, ceea ce face studiul 
+comparativ pe distribuții diverse esențial atât din perspectivă 
+academică, cât și practică \cite{bentley1993engineering}.
 
 Această lucrare prezintă o analiză experimentală a șase algoritmi de 
 sortare pe distribuții diverse, cu accent pe comportamentul lor în scenarii 
@@ -455,31 +464,22 @@ teoretice și proprietăților algoritmilor analizați în această lucrare pân
 \begin{table}[H]
     \caption{Complexitatea și proprietățile algoritmilor de sortare}
     \label{tab:complexitati}
-    \begin{tabular}{
-        >{\raggedright\arraybackslash}p{0.18\columnwidth}
-        >{\raggedright\arraybackslash}p{0.13\columnwidth}
-        >{\raggedright\arraybackslash}p{0.13\columnwidth}
-        >{\raggedright\arraybackslash}p{0.13\columnwidth}
-        >{\raggedright\arraybackslash}p{0.13\columnwidth}
-        >{\raggedright\arraybackslash}p{0.13\columnwidth}
-    }
+    \resizebox{\columnwidth}{!}{%
+    \begin{tabular}{lllll}
     \toprule
-    \textbf{Algoritm} & \textbf{Best} & \textbf{Average} & \textbf{Worst} & \textbf{Spațiu} & \textbf{Stabil} \\
+    \textbf{Algoritm} & \textbf{Best} & \textbf{Average} & \textbf{Worst} & \textbf{Spațiu} \\
     \midrule
-    Bubble Sort     & $O(n)$        & $O(n^2)$       & $O(n^2)$       & $O(1)$       & Da \\
-    Insertion Sort  & $O(n)$        & $O(n^2)$       & $O(n^2)$       & $O(1)$       & Da \\
-    Merge Sort      & $O(n \log n)$ & $O(n \log n)$  & $O(n \log n)$  & $O(n)$       & Da \\
-    Quick Sort      & $O(n \log n)$ & $O(n \log n)$  & $O(n^2)$       & $O(\log n)$  & Nu \\
-    std::sort       & $O(n \log n)$ & $O(n \log n)$  & $O(n \log n)$  & $O(\log n)$  & Nu \\
-    Sleep Sort      & $O(k)$        & $O(k)$         & $O(k)$         & $O(n+k)$     & Nu \\
+    Bubble Sort     & $O(n)$        & $O(n^2)$       & $O(n^2)$       & $O(1)$      \\
+    Insertion Sort  & $O(n)$        & $O(n^2)$       & $O(n^2)$       & $O(1)$      \\
+    Merge Sort      & $O(n \log n)$ & $O(n \log n)$  & $O(n \log n)$  & $O(n)$      \\
+    Quick Sort      & $O(n \log n)$ & $O(n \log n)$  & $O(n^2)$       & $O(\log n)$ \\
+    std::sort       & $O(n \log n)$ & $O(n \log n)$  & $O(n \log n)$  & $O(\log n)$ \\
+    Sleep Sort      & $O(k)$        & $O(k)$         & $O(k)$         & $O(n+k)$    \\
     \bottomrule
-    \end{tabular}
+    \end{tabular}}
     \tabletext{$k$ = numărul de valori unice din șir. Complexitatea 
     Sleep Sort exclude timpul de așteptare $O(\max(A))$, 
     care depinde de valorile elementelor, nu de $n$.}
-    \tabletext{Stabilitatea Sleep Sort depinde de implementare — 
-varianta propusă folosește \texttt{std::unordered\_map}, 
-care nu garantează ordinea de iterare, deci nu este stabilă.}
 \end{table}
 
 Pe baza acestor proprietăți teoretice, ne așteptăm ca Merge Sort 
@@ -634,20 +634,33 @@ Sorted        & 0.8755 & 0.6050 & \textbf{0.4451} \\
 
 \section{Comparație cu literatura actuală}
 
-    Bubble Sort și Insertion Sort au confirmat complexitatea $O(n^2)$ documentată de Knuth \cite{knuth1998sorting}, fără surprize.
+\par Studiile experimentale riguroase care compară mai mulți algoritmi 
+de sortare pe distribuții variate de date sunt surprinzător de rare 
+în literatura peer-reviewed. Majoritatea lucrărilor se concentrează 
+pe un singur algoritm sau pe un aspect specific,ca eficiența cache.
+
+\par Cea mai apropiată lucrare de abordarea acestui studiu este 
+Rai et al. \cite{rai2025comparative}, o lucrare recentă care, deși 
+nepeer-reviewed la momentul redactării acestui articol, realizează 
+o analiză experimentală detaliată a patru algoritmi clasici, 
+Bubble Sort, Quick Sort, Merge Sort și Heap Sort, pe seturi de 
+date reale, raportând timpi de execuție cu bare de eroare, număr 
+de comparații și swap-uri, și distribuția varianței pe mai multe 
+rulări.
+
+\par Această profunzime analitică depășește ce este prezentat 
+în această lucrare,totuși, există diferențe metodologice semnificative. 
+Rai et al. nu testează distribuțiile \textit{Aproape Sortat} 
+și \textit{Plat}, tocmai scenariile în care algoritmi precum 
+Insertion Sort sau Quick Sort prezintă comportamente neașteptate 
+și care sunt relevante pentru date reale.
 
 
-  \par Merge Sort a confirmat complexitatea $O(n \log n)$ în toate cazurile, dar a avut o performanță mai slabă decât Quick Sort și pe șirurile de tipul "Plat" de dimensiuni mici, ceea ce poate fi atribuit mai multor factori discutați în subsecțiunea de analiză a acestuia.
-
-\par Quick Sort a degradat exact unde teoria prezice, pe date sortate și sortate descrescător, confirmând analiza clasică \cite{hoare1961quicksort}, și a eșuat pe șirurile mari din aceste distribuții din cauza alegerii ineficiente a pivotului, așa cum era de așteptat.
-
-\par std::sort a performat conform descrierii Introsort din Musser \cite{musser1997introsort}, inclusiv comportamentul superior pe șiruri aproape sortate față de Quick Sort pur, cât și pe șiruri mici, fără necesitatea unui overhead de recursivitate.
-    
 \par Sleep Sort nu are literatură de specialitate în sensul academic al termenului, având doar implementări și articole informale \cite{princeton_sleepsort, henney2023sleepsort}. 
 \par Nu există lucrări peer-reviewed care să analizeze comportamentul său pe date reale, complexitatea sa practică sau comparații cu algoritmi non-comparativi.
     Prin urmare, această secțiune nu poate compara rezultatele cu un corp de cunoștințe existent, pentru că acel corp nu există.
 
-\par Contribuția principală a acestei lucrări este tocmai umplerea acestui gol în literatura de specialitate, oferind nu doar o analiză detaliată a performanței Sleep Sort pe date reale, ci și o optimizare semnificativă a implementării sale pentru a gestiona eficient valorile duplicate, ceea ce nu a fost abordat în niciuna dintre sursele informale existente.
+\par Contribuția principală a acestei lucrări este tocmai umplerea acestui gol în literatura de specialitate, oferind nu doar o analiză detaliată a performanței Sleep Sort pe date reale, ci și o optimizare semnificativă a implementării sale pentru a gestiona eficient valorile duplicate, ceea ce nu a fost abordat în niciuna dintre sursele existente.
 \par \textbf{Chiar și dacă Sleep Sort este inferior în general față de Counting Sort și Radix Sort, performanța sa în scenarii specifice, cum ar fi șirurile cu o gamă limitată de valori sau cu multe duplicate, oferă o perspectivă interesantă despre cum putem exploata paralelismul hardware pentru a obține performanțe competitive în sortare, chiar și cu o abordare neconvențională.}
 
 

@@ -59,7 +59,7 @@
       <file>ieee.bbx</file>
       <file>numeric-comp.cbx</file>
       <file>biblatex.cfg</file>
-      <file>english.lbx</file>
+      <file>romanian.lbx</file>
     </requires>
   </internal>
   <external package="biblatex" priority="5" active="0">

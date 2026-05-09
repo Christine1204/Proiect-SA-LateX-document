@@ -47,95 +47,45 @@
 % Label for "keywords" 
 %----------------------------------------------------------
 
-\newcommand{\keywordname}{{\keywordheadfont{Keywords:\nobreakspace}}}
+\newcommand{\keywordname}{{\keywordheadfont{%
+    \iflanguage{romanian}{Cuvinte cheie:\nobreakspace}{Keywords:\nobreakspace}%
+}}}
 
-%----------------------------------------------------------
-
-% Tip: Change manually the second {} if using another language
-
-%----------------------------------------------------------
-% Language labels for cross-references
-%----------------------------------------------------------
-
-% Cross-reference label for figure
 \newcommand{\figlabel}{%
-    \iflanguage{spanish}{%
-        {Fig.}%
-    }{%else
-        {Fig.}%
-    }%
+    \iflanguage{spanish}{{Fig.}}{\iflanguage{romanian}{{Fig.}}{{Fig.}}}%
 }
 
-% Cross-reference label for figures
 \newcommand{\figslabel}{%
-    \iflanguage{spanish}{%
-        {Figs.}%
-    }{%else
-        {Figs.}%
-    }%
+    \iflanguage{spanish}{{Figs.}}{\iflanguage{romanian}{{Figs.}}{{Figs.}}}%
 }
 
-% Cross-reference label for tables
 \newcommand{\tablabel}{%
-    \iflanguage{spanish}{%
-        {Tabla}%
-    }{%else
-        {Table}%
-    }%
+    \iflanguage{spanish}{{Tabla}}{\iflanguage{romanian}{{Tabel}}{{Table}}}%
 }
 
-% Caption and cross-reference label for codes
 \newcommand{\captionlabelcode}{%
-    \iflanguage{spanish}{%
-        {C\'odigo}%
-    }{%else
-        {Code}%
-    }%
+    \iflanguage{spanish}{{C\'odigo}}{\iflanguage{romanian}{{Cod}}{{Code}}}%
 }
 
-% Cross-reference label for equations
 \newcommand{\eqlabel}{%
-    \iflanguage{spanish}{%
-        {Ecuaci\'on}%
-    }{%else
-        {Equation}%
-    }%
+    \iflanguage{spanish}{{Ecuaci\'on}}{\iflanguage{romanian}{{Ecua\c{t}ie}}{{Equation}}}%
 }
-
-%----------------------------------------------------------
-% Conjunction used between author names 
-%----------------------------------------------------------
 
 \newcommand{\andlanguage}{%
-    \iflanguage{spanish}{%
-        { y }%
-    }{%else
-        { and }%
-    }%
+    \iflanguage{spanish}{{ y }}{\iflanguage{romanian}{{ \c{s}i }}{{ and }}}%
 }
 
-%----------------------------------------------------------
-% Translatable titles for custom environments
-%----------------------------------------------------------
-
-% Info environment
 \newcommand{\infolanguage}{%
-    \iflanguage{spanish}{%
-        {Informaci\'on}%
-    }{%else
-        {Information}%
-    }%
+    \iflanguage{spanish}{{Informaci\'on}}{\iflanguage{romanian}{{Informa\c{t}ie}}{{Information}}}%
 }
 
-% Note environment
 \newcommand{\notelanguage}{%
-    \iflanguage{spanish}{%
-        {Nota}%
-    }{%else
-        {Note}%
-    }%
+    \iflanguage{spanish}{{Nota}}{\iflanguage{romanian}{{Not\u{a}}}{{Note}}}%
 }
 
 %----------------------------------------------------------
+
+
+
 
 \endinput

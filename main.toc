@@ -1,4 +1,4 @@
-\babel@toc {english}{}\relax 
+\babel@toc {romanian}{}\relax 
 \contentsline {section}{\numberline {1}Introducere}{2}{section.1}%
 \contentsline {subsection}{\numberline {1.1}Declarație de originalitate}{2}{subsection.1.1}%
 \contentsline {section}{\numberline {2}Date de Intrare}{2}{section.2}%
@@ -11,18 +11,18 @@
 \contentsline {subsubsection}{\numberline {2.2.5}Plat}{2}{subsubsection.2.2.5}%
 \contentsline {section}{\numberline {3}Algoritmi de sortare}{2}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Bubble Sort}{2}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Insertion Sort}{2}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.2}Insertion Sort}{3}{subsection.3.2}%
 \contentsline {subsection}{\numberline {3.3}Merge Sort}{3}{subsection.3.3}%
 \contentsline {subsection}{\numberline {3.4}Quick Sort}{3}{subsection.3.4}%
 \contentsline {subsection}{\numberline {3.5}std::sort}{4}{subsection.3.5}%
 \contentsline {subsection}{\numberline {3.6}Sleep Sort}{4}{subsection.3.6}%
-\contentsline {subsubsection}{\numberline {3.6.1}Determinarea timpului de \textit {somn}}{4}{subsubsection.3.6.1}%
+\contentsline {subsubsection}{\numberline {3.6.1}Determinarea timpului de \textit {somn}}{5}{subsubsection.3.6.1}%
 \contentsline {subsubsection}{\numberline {3.6.2}Problema elementelor duplicate}{5}{subsubsection.3.6.2}%
 \contentsline {subsubsection}{\numberline {3.6.3}Complexitatea algoritmului și influența sistemului de operare și hardware-ului}{5}{subsubsection.3.6.3}%
 \contentsline {subsubsection}{\numberline {3.6.4}Comparația cu Counting și Radix Sort}{5}{subsubsection.3.6.4}%
 \contentsline {subsubsection}{\numberline {3.6.5}Numere negative și numere raționale}{5}{subsubsection.3.6.5}%
 \contentsline {subsection}{\numberline {3.7}Ipoteze și așteptări}{5}{subsection.3.7}%
-\contentsline {section}{\numberline {4}Rezultate}{5}{section.4}%
+\contentsline {section}{\numberline {4}Rezultate}{6}{section.4}%
 \contentsline {subsection}{\numberline {4.1}Bubble Sort - Analiză}{6}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}Insertion Sort - Analiză}{6}{subsection.4.2}%
 \contentsline {subsection}{\numberline {4.3}Merge Sort - Analiză}{6}{subsection.4.3}%
